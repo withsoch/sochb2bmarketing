@@ -1,0 +1,192 @@
+@import "tailwindcss";
+
+/* ------------------------------------------------------------------ */
+/*  Soch - Design System (shared with Soch Catalyst)                  */
+/*  Geometric sans headlines · warm cream · flat orange · forest CTA  */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Brand - HubSpot red-orange */
+  --color-brand: #ff5c35;
+  --color-brand-light: #ff7a59;
+  --color-brand-dark: #e8431b;
+  --color-brand-deep: #c9350f;
+
+  /* Text - warm near-black */
+  --color-ink: #1c2b26;
+  --color-ink-soft: #33403b;
+  --color-slate: #4c534f;
+  --color-muted: #7a817d;
+
+  /* Surfaces - warm */
+  --color-mist: #f6f2ea;   /* warm off-white section bg */
+  --color-cream: #fbf8f2;  /* lighter warm */
+  --color-peach: #ffe8dd;  /* soft accent bg */
+  --color-line: #e7e2d7;   /* warm hairline */
+
+  /* Dark sections */
+  --color-forest: #103129; /* CTA / accent dark green */
+  --color-charcoal: #171814; /* footer near-black */
+
+  /* Accents (used sparingly) */
+  --color-teal: #1f7a8c;
+  --color-leaf: #1f8a66;
+
+  /* Small channel-dot badges only (never structural UI color) - used to tag
+     which platform a piece of content belongs to across the multi-channel
+     positioning (content calendar chips, notification chips, etc). */
+  --color-channel-instagram: #c23fc2;
+  --color-channel-facebook: #1877f2;
+  --color-channel-tiktok: #1a1a1a;
+  --color-channel-google: #4285f4;
+  --color-channel-linkedin: #0a66c2;
+
+  /* Fonts */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+
+  /* Shadows - subtle, HubSpot uses borders not big shadows */
+  --shadow-soft: 0 1px 2px rgba(20, 30, 25, 0.04);
+  --shadow-card: 0 6px 22px -12px rgba(20, 30, 25, 0.18);
+  --shadow-lift: 0 22px 48px -22px rgba(20, 30, 25, 0.28);
+
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-slate);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    line-height: 1.14;
+    text-wrap: balance;
+  }
+
+  p { text-wrap: pretty; }
+
+  ::selection {
+    background: var(--color-brand);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Fluid display scale. Tracking/leading are tuned for Poppins - a geometric
+     sans sets wider and taller than the serif this scale was first drawn for. */
+  .text-display {
+    font-size: clamp(2.7rem, 1.5rem + 4.4vw, 4.7rem);
+    line-height: 1.08;
+    letter-spacing: -0.028em;
+    font-weight: 500;
+  }
+  .text-h2 {
+    font-size: clamp(2.05rem, 1.4rem + 2.3vw, 3.3rem);
+    line-height: 1.12;
+    letter-spacing: -0.022em;
+    font-weight: 500;
+  }
+  .text-h3 {
+    font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.7rem);
+    line-height: 1.16;
+    font-weight: 600;
+  }
+  .lead {
+    font-size: clamp(1.075rem, 1rem + 0.4vw, 1.28rem);
+    line-height: 1.62;
+    color: var(--color-slate);
+  }
+
+  /* HubSpot-style eyebrow: small bordered tag */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    color: var(--color-ink);
+    background: #fff;
+    border: 1px solid var(--color-line);
+    border-radius: 8px;
+    padding: 0.32rem 0.72rem;
+    text-transform: none;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 2px;
+    background: var(--color-brand);
+    transform: rotate(45deg);
+  }
+
+  /* dashed rule used beside eyebrows / dividers */
+  .rule-dashed {
+    border-top: 1px dashed var(--color-line);
+  }
+
+  /* Accent: solid orange (replaces former gradient text) */
+  .text-gradient { color: var(--color-brand); }
+  .text-accent { color: var(--color-brand); }
+}
+
+@layer utilities {
+  .container-x {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+  @media (min-width: 1024px) {
+    .container-x { padding-inline: 2.5rem; }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-marquee { animation: marquee 42s linear infinite; }
+
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up { opacity: 0; animation: fade-up 0.7s var(--ease-out-soft) forwards; }
+  .animate-pop { opacity: 0; animation: fade-up 0.8s var(--ease-out-soft) 0.15s forwards; }
+
+  @keyframes float-soft {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  .animate-float-a { animation: float-soft 6s ease-in-out infinite; }
+  .animate-float-b { animation: float-soft 7s ease-in-out 0.6s infinite; }
+  .animate-float-c { animation: float-soft 5.5s ease-in-out 1s infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee,
+    .animate-float-a, .animate-float-b, .animate-float-c { animation: none; }
+    .animate-fade-up, .animate-pop { animation: none; opacity: 1; }
+    html { scroll-behavior: auto; }
+  }
+}
