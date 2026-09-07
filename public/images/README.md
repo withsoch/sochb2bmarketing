@@ -30,8 +30,8 @@ mockup blocks and initials discs). Nothing breaks, nothing shows a broken-image 
   `photo: "/images/team/<file>.jpg"`.
 - **Food in the service mockups** — add the path to the `FOOD` manifest at the top of
   `components/CategoryVisual.tsx`.
-- **Testimonial avatars** — set `photo` on the entry in `TESTIMONIALS` (`lib/content.ts`).
-- **Case-study venues** — set `image` on the entry in `CASE_STUDIES` (`lib/content.ts`).
+- **Case-study quotes & avatars** — set `image` on the entry in `CASE_STUDIES`
+  (`lib/content.ts`); it feeds both the homepage carousel and quote strip.
 
 Paths are plain strings rooted at `public/`, so `public/images/food/wrap.jpg` is
 referenced as `/images/food/wrap.jpg`.

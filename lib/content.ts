@@ -459,52 +459,6 @@ export type TeamMember = {
 // whitespace. Photos go in public/images/team/ - see that folder's README.
 export const TEAM: TeamMember[] = [];
 
-export type Testimonial = {
-  quote: string;
-  name: string;
-  role: string;
-  initials: string;
-  accent: string;
-  /**
-   * Head-and-shoulders photo of the speaker, rooted at public/
-   * (e.g. "/images/team/marek.jpg"). Falls back to the initials disc.
-   *
-   * These cards name a specific person at a specific business, so this slot
-   * takes an owned photo of that person only - never a stock face.
-   */
-  photo?: string;
-};
-
-// NOTE: Placeholder testimonials, invented for internal review only, and
-// marked "(placeholder)" in the role line so they cannot be mistaken for
-// real proof. Replace with real client quotes & names before launch.
-export const TESTIMONIALS: Testimonial[] = [
-  {
-    quote:
-      "Our Google listing sat half empty for two years. A fortnight after they filled it in, people who'd never been in the door started asking for directions in the comments.",
-    name: "Marek T.",
-    role: "Owner, café in Tallinn (placeholder)",
-    initials: "MT",
-    accent: "#ff5c35",
-  },
-  {
-    quote:
-      "The reviews get answered the same day now. Answering reviews on the phone between shifts was the job I kept putting off, every day, for about three years.",
-    name: "Liis K.",
-    role: "Manager, shisha lounge (placeholder)",
-    initials: "LK",
-    accent: "#1f7a8c",
-  },
-  {
-    quote:
-      "Our Instagram actually brings people in on a Tuesday now. Same menu, same prices, and noticeably fuller tables on the nights that used to be quiet.",
-    name: "Andrei S.",
-    role: "Founder, restaurant group (placeholder)",
-    initials: "AS",
-    accent: "#1f8a66",
-  },
-];
-
 export type CaseStudy = {
   slug: string;
   company: string;
@@ -596,7 +550,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     accent: "#103129",
     initials: "SA",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D03AQEPW0neV8fQrA/profile-displayphoto-crop_800_800/B4DZkkgP2THsAI-/0/1757254059122?e=1782950400&v=beta&t=mgmnxulxv_s2Yuno-AdYbwJK7qA8imxV7c73EPYzI9s",
+      "/images/case-studies/shahzad-akhtar.jpg",
   },
   {
     slug: "kaitlin-malaspina",
@@ -617,7 +571,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     accent: "#1f7a8c",
     initials: "KM",
     image:
-      "https://media.licdn.com/dms/image/v2/D4E03AQHNiiko81qmAQ/profile-displayphoto-crop_800_800/B4EZkH3OJ3GoAI-/0/1756773540889?e=1782950400&v=beta&t=RBDDJIOTs9j5G85DH_3rrLbpkogSZ-CCyEfs85xbwzY",
+      "/images/case-studies/kaitlin-malaspina.jpg",
   },
 ];
 

@@ -12,9 +12,7 @@ export function Footer() {
         {/* link columns */}
         <div className="grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_1.15fr_1fr]">
           <div className="max-w-xs">
-            <div className="inline-flex rounded-lg bg-white p-2">
-              <Logo imgClassName="h-8 w-auto" />
-            </div>
+            <Logo imgClassName="h-11 w-auto" light />
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               {SITE.tagline}
             </p>

@@ -1,3 +1,4 @@
+import { BookButton } from "@/components/BookButton";
 import { Button } from "@/components/ui/Button";
 import { Reveal } from "@/components/ui/Reveal";
 import { PACKAGES } from "@/lib/content";
@@ -39,13 +40,12 @@ export function PackagesPreview() {
                   )}
                 </div>
                 <p className="mt-2 text-[0.85rem] leading-relaxed text-slate">{p.audience}</p>
-                <div className="rule-dashed my-4" />
-                <p
-                  className="text-[1.25rem] leading-none text-ink"
-                  style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
-                >
-                  Get a quote
-                </p>
+                <div className="mt-auto">
+                  <div className="rule-dashed my-4" />
+                  <BookButton variant="primary" size="md" className="w-full justify-center">
+                    Get a quote
+                  </BookButton>
+                </div>
               </div>
             </Reveal>
           ))}

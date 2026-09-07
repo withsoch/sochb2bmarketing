@@ -40,7 +40,7 @@ const CARDS = [
   },
   {
     initials: "Shahzad Akhtar - Strateasy Consulting",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQEPW0neV8fQrA/profile-displayphoto-crop_800_800/B4DZkkgP2THsAI-/0/1757254059122?e=1782950400&v=beta&t=mgmnxulxv_s2Yuno-AdYbwJK7qA8imxV7c73EPYzI9s",
+    image: "/images/case-studies/shahzad-akhtar.jpg",
     tags: ["Management Consulting"],
     title:
       "Turning 28 years of practitioner expertise into a LinkedIn presence that generates consulting pipeline",
@@ -53,7 +53,7 @@ const CARDS = [
   },
   {
     initials: "Kaitlin Malaspina - Brenna & Co.",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQHNiiko81qmAQ/profile-displayphoto-crop_800_800/B4EZkH3OJ3GoAI-/0/1756773540889?e=1782950400&v=beta&t=RBDDJIOTs9j5G85DH_3rrLbpkogSZ-CCyEfs85xbwzY",
+    image: "/images/case-studies/kaitlin-malaspina.jpg",
     tags: ["Business Architecture"],
     title:
       "Making a distinctive offer legible: how a Private Operating House built the channel to match the work",
@@ -89,8 +89,8 @@ export default function CaseStudiesPage() {
             {[
               { src: "https://cdn.prod.website-files.com/68e7ded517d0693d2c345250/6a2fb631aa9fc98e79ae2810_1714512298914.jpg", alt: "Gaia Ferrero" },
               { src: "https://cdn.prod.website-files.com/68e7ded517d0693d2c345250/6a2fb8c5358ef1ae4b6b238c_1674503443215.jpg", alt: "Biola Babawale" },
-              { src: "https://media.licdn.com/dms/image/v2/D4D03AQEPW0neV8fQrA/profile-displayphoto-crop_800_800/B4DZkkgP2THsAI-/0/1757254059122?e=1782950400&v=beta&t=mgmnxulxv_s2Yuno-AdYbwJK7qA8imxV7c73EPYzI9s", alt: "Shahzad Akhtar" },
-              { src: "https://media.licdn.com/dms/image/v2/D4E03AQHNiiko81qmAQ/profile-displayphoto-crop_800_800/B4EZkH3OJ3GoAI-/0/1756773540889?e=1782950400&v=beta&t=RBDDJIOTs9j5G85DH_3rrLbpkogSZ-CCyEfs85xbwzY", alt: "Kaitlin Malaspina" },
+              { src: "/images/case-studies/shahzad-akhtar.jpg", alt: "Shahzad Akhtar" },
+              { src: "/images/case-studies/kaitlin-malaspina.jpg", alt: "Kaitlin Malaspina" },
             ].map((f, i) => (
               <Reveal key={f.alt} delay={i * 0.1}>
                 <div style={{ overflow: "hidden", borderRadius: "12px", minHeight: 0 }}>

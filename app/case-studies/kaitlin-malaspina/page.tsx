@@ -151,7 +151,7 @@ export default function KaitlinMalaspinaPage() {
           >
             <div className="aspect-[3/4] w-full overflow-hidden rounded border border-line">
               <img
-                src="https://media.licdn.com/dms/image/v2/D4E03AQHNiiko81qmAQ/profile-displayphoto-crop_800_800/B4EZkH3OJ3GoAI-/0/1756773540889?e=1782950400&v=beta&t=RBDDJIOTs9j5G85DH_3rrLbpkogSZ-CCyEfs85xbwzY"
+                src="/images/case-studies/kaitlin-malaspina.jpg"
                 alt="Kaitlin Malaspina"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -210,7 +210,7 @@ export default function KaitlinMalaspinaPage() {
 
               <div className="mt-10 aspect-[16/8] w-full overflow-hidden rounded">
                 <img
-                  src="https://media.licdn.com/dms/image/v2/D4E03AQHNiiko81qmAQ/profile-displayphoto-crop_800_800/B4EZkH3OJ3GoAI-/0/1756773540889?e=1782950400&v=beta&t=RBDDJIOTs9j5G85DH_3rrLbpkogSZ-CCyEfs85xbwzY"
+                  src="/images/case-studies/kaitlin-malaspina.jpg"
                   alt="Kaitlin Malaspina, Brenna & Co."
                   style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }}
                 />

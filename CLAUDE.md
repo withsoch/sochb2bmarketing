@@ -43,7 +43,7 @@ Copy `.env.example` to `.env.local` before relying on live behavior:
 service categories, packages, pricing FAQs, process steps, stats, team,
 testimonials, client logos, and the audit/confirmation page copy all live
 here as typed exports (`HERO`, `SITE`, `NAV`, `SERVICE_CATEGORIES`,
-`PACKAGES`, `STEPS`, `TESTIMONIALS`, `CASE_STUDIES`, etc.). Pages and
+`PACKAGES`, `STEPS`, `CASE_STUDIES`, etc.). Pages and
 components import from it rather than hardcoding copy, so a content change
 is almost always a `lib/content.ts` edit, not a JSX edit. `lib/channels.ts`
 similarly centralizes the platform list (Instagram/Google/LinkedIn/Facebook/
