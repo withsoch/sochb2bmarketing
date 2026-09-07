@@ -6,9 +6,9 @@ import { AuditButton } from "@/components/AuditButton";
 import { CTAS } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Case Studies: Client Results | Soch",
+  title: "Case Studies: Client Results | Social Catalyst",
   description:
-    "Real results from Soch client engagements across LinkedIn strategy, personal branding, and go-to-market positioning.",
+    "Real results from Social Catalyst client engagements across LinkedIn strategy, personal branding, and go-to-market positioning.",
 };
 
 const CARDS = [

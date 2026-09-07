@@ -117,14 +117,14 @@ export default function ConfirmationPage() {
                 <figcaption className="mt-4 flex items-center gap-3 border-t border-dashed border-line pt-4">
                   <Avatar
                     src="/images/team/rizwan-founder.webp"
-                    name="Rizwan, Soch founder"
+                    name="Rizwan, Social Catalyst founder"
                     initials="R"
                     size={52}
                     objectPosition="50% 20%"
                     captioned
                   />
                   <span className="text-[0.8rem] leading-tight text-slate">
-                    <span className="block font-semibold text-ink">The Soch team</span>
+                    <span className="block font-semibold text-ink">The Social Catalyst team</span>
                     Nothing back in 24 hours?{" "}
                     <a
                       href={`mailto:${SITE.email}`}

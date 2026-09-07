@@ -88,7 +88,7 @@ export default function BookPage() {
               <div className="mt-5 flex flex-col gap-5 rounded-2xl border border-line bg-white p-6 sm:flex-row sm:items-center">
                 <Photo
                   src={TEAM[0].photo}
-                  alt={`${TEAM[0].name}, ${TEAM[0].role} at Soch`}
+                  alt={`${TEAM[0].name}, ${TEAM[0].role} at Social Catalyst`}
                   ratio="1/1"
                   sizes="112px"
                   className="w-28 shrink-0 rounded-xl"

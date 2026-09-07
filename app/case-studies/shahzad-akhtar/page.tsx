@@ -3,9 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { StatCounter } from "@/components/StatCounter";
 
 export const metadata: Metadata = {
-  title: "Shahzad Akhtar, Strateasy Consulting | Signal House Case Study",
+  title: "Shahzad Akhtar, Strateasy Consulting | Social Catalyst Case Study",
   description:
-    "How Signal House turned Shahzad Akhtar's 28 years of practitioner expertise into a LinkedIn presence that generates consulting pipeline: 6× profile view growth, 29% outreach reply rate, and 11 qualified conversations in 5 months.",
+    "How Social Catalyst turned Shahzad Akhtar's 28 years of practitioner expertise into a LinkedIn presence that generates consulting pipeline: 6× profile view growth, 29% outreach reply rate, and 11 qualified conversations in 5 months.",
 };
 
 const HERO_STATS = [
@@ -206,7 +206,7 @@ export default function ShahzadAkhtarPage() {
                 <p>
                   But his LinkedIn told none of that story in a way that generated pipeline.
                   Every new engagement still started from zero, rebuilt on reputation,
-                  referral, and being in the right room. He came to Signal House to fix that:
+                  referral, and being in the right room. He came to Social Catalyst to fix that:
                   to build a presence that did the introduction before the meeting, and
                   shortened the trust-building cycle with the right people.
                 </p>

@@ -24,7 +24,7 @@ const poppins = Poppins({
 });
 
 // Placeholder domain, replace with the real one before launch.
-const SITE_URL = "https://soch.co";
+const SITE_URL = "https://socialcatalyst.co";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "We run Instagram, LinkedIn, Google and review replies for B2B and growing businesses. You approve every post. Packages from €290/month.",
+    "We run Instagram, LinkedIn, Google and review replies for B2B and growing businesses. You approve every post. Get a quote for your package.",
   keywords: [
     "B2B social media marketing",
     "LinkedIn marketing agency",
@@ -51,18 +51,18 @@ export const metadata: Metadata = {
     "B2B marketing agency",
   ],
   openGraph: {
-    title: "Soch: Social Media Marketing for B2B & Growing Businesses",
+    title: "Social Catalyst: Social Media Marketing for B2B & Growing Businesses",
     description:
-      "We run Instagram, LinkedIn, Google and review replies for B2B and growing businesses. You approve every post. Packages from €290/month.",
+      "We run Instagram, LinkedIn, Google and review replies for B2B and growing businesses. You approve every post. Get a quote for your package.",
     url: SITE_URL,
-    siteName: "Soch",
+    siteName: "Social Catalyst",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Soch: Social Media Marketing for B2B & Growing Businesses",
+    title: "Social Catalyst: Social Media Marketing for B2B & Growing Businesses",
     description:
-      "We run Instagram, LinkedIn, Google and review replies for B2B and growing businesses. You approve every post. Packages from €290/month.",
+      "We run Instagram, LinkedIn, Google and review replies for B2B and growing businesses. You approve every post. Get a quote for your package.",
   },
 };
 

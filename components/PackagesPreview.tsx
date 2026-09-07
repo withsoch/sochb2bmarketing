@@ -10,7 +10,7 @@ export function PackagesPreview() {
       <div className="container-x">
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
-            <h2 className="text-h2">Packages, starting from €290/month.</h2>
+            <h2 className="text-h2">Five packages. Get a quote for yours.</h2>
             <p className="lead mt-5">
               Five packages, one goal: look open, get found, get more orders.
               See the full detail and the two specialist tracks on the
@@ -40,16 +40,12 @@ export function PackagesPreview() {
                 </div>
                 <p className="mt-2 text-[0.85rem] leading-relaxed text-slate">{p.audience}</p>
                 <div className="rule-dashed my-4" />
-                <p>
-                  <span
-                    className="text-[1.5rem] leading-none text-ink"
-                    style={{ fontFamily: "var(--font-display)", fontWeight: 500, fontVariantNumeric: "tabular-nums" }}
-                  >
-                    {p.monthly}
-                  </span>
-                  <span className="ml-1 text-[0.85rem] font-medium text-muted">/month</span>
+                <p
+                  className="text-[1.25rem] leading-none text-ink"
+                  style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
+                >
+                  Get a quote
                 </p>
-                <p className="mt-1 text-[0.75rem] text-muted">Starting from</p>
               </div>
             </Reveal>
           ))}

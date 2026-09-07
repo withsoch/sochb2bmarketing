@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-//  Soch - single source of content & config.
+//  Social Catalyst - single source of content & config.
 //  Copy, services, packages, process, proof and the scheduler/booking
 //  links all live here so the client can update everything from one file.
 // ------------------------------------------------------------------
@@ -13,12 +13,12 @@ export const HERO = {
 };
 
 export const SITE = {
-  name: "Soch",
+  name: "Social Catalyst",
   tagline:
     "Instagram, LinkedIn, Google and reviews marketing for B2B and growing businesses.",
   // Placeholder contact details, replace before launch.
   email: "riz@soovita.com",
-  linkedin: "https://www.linkedin.com/company/soch/",
+  linkedin: "https://www.linkedin.com/company/social-catalyst/",
 };
 
 /**
@@ -271,9 +271,6 @@ export type Package = {
   name: string;
   audience: string;
   outcome: string;
-  monthly: string;
-  setup: string;
-  setupNote?: string;
   popular?: boolean;
   track: "core" | "specialist";
   features: string[];
@@ -285,8 +282,6 @@ export const PACKAGES: Package[] = [
     name: "Essentials",
     audience: "For a small business or startup with no time to spare.",
     outcome: "Your feed and your Google listing stop looking abandoned.",
-    monthly: "€290",
-    setup: "€200",
     track: "core",
     features: [
       "6 posts a month, photos included",
@@ -299,8 +294,6 @@ export const PACKAGES: Package[] = [
     name: "Starter",
     audience: "For a business with almost nothing online yet.",
     outcome: "Get found on Google, and post twice a week without doing it.",
-    monthly: "€470",
-    setup: "€450",
     track: "core",
     features: [
       "Instagram profile rebuilt properly",
@@ -315,9 +308,6 @@ export const PACKAGES: Package[] = [
     name: "Growth",
     audience: "For a business that posts sometimes and knows it should do more.",
     outcome: "Show up on every channel your buyers already use, in two languages.",
-    monthly: "€960",
-    setup: "€730",
-    setupNote: "website included free",
     popular: true,
     track: "core",
     features: [
@@ -336,8 +326,6 @@ export const PACKAGES: Package[] = [
     name: "Outbound-Led",
     audience: "For a business where most new clients come from outreach and referrals.",
     outcome: "Get more replies out of the outreach you're already sending.",
-    monthly: "€690",
-    setup: "€850",
     track: "specialist",
     features: [
       "Full LinkedIn profile and company page rebuild",
@@ -353,8 +341,6 @@ export const PACKAGES: Package[] = [
     name: "Full",
     audience: "For an owner with two or three business lines, or big plans for one.",
     outcome: "Every channel that brings people in, run by one team.",
-    monthly: "€2,330",
-    setup: "€2,050",
     track: "specialist",
     features: [
       "Everything above: Instagram (top tier), TikTok, brand kit, website, the full Google suite, LinkedIn outreach, review system",
@@ -371,7 +357,7 @@ export const PACKAGE_TERMS = [
 ];
 
 export const PACKAGE_FINE_PRINT = [
-  "All prices in EUR, excluding VAT.",
+  "All quotes in EUR, excluding VAT.",
   "Minimum term: 6 months, then month to month with 30 days' notice.",
   "You approve every post before it goes live. Nothing is published without your sign-off.",
   "Website: one page, two rounds of changes, domain registered in your name.",
@@ -395,7 +381,7 @@ export const PRICING_FAQS: FaqItem[] = [
   },
   {
     q: "Is the ad budget included in the Full package price?",
-    a: "No. The €2,330 a month covers running your ads: setup, targeting, weekly changes. Whatever you spend on the ads themselves goes from you straight to the platform, on top of that.",
+    a: "No. The Full package fee covers running your ads: setup, targeting, weekly changes. Whatever you spend on the ads themselves goes from you straight to the platform, on top of that.",
   },
   {
     q: "Which package is right for my business?",
@@ -542,7 +528,7 @@ export type CaseStudy = {
   image?: string;
 };
 
-// Real Signal House / Soch Catalyst client engagements, reused here with
+// Real Social Catalyst client engagements, reused here with
 // internal sign-off (see conversation). Each slug has its own full page
 // under app/case-studies/<slug>/page.tsx (not driven by this array) - the
 // entries below only feed the homepage carousel (components/Testimonials.tsx)
@@ -562,7 +548,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: "12+", label: "Qualified inbound conversations in 90 days" },
     ],
     quote:
-      "I knew what good LinkedIn looked like. I just couldn't make it happen alongside everything else. Handing it to Signal House was the right call. Within a few weeks it felt like my profile finally sounded like me.",
+      "I knew what good LinkedIn looked like. I just couldn't make it happen alongside everything else. Handing it to Social Catalyst was the right call. Within a few weeks it felt like my profile finally sounded like me.",
     author: "Gaia Ferrero",
     authorRole: "Founder, Byzantine",
     accent: "#1f7a8c",
@@ -583,7 +569,7 @@ export const CASE_STUDIES: CaseStudy[] = [
       { value: "100%", label: "Consistent weekly content maintained" },
     ],
     quote:
-      "I had so much to say about what we're building, but I couldn't figure out how to say it on LinkedIn in a way that felt right. Signal House helped me find that voice, and then made sure it showed up every single week.",
+      "I had so much to say about what we're building, but I couldn't figure out how to say it on LinkedIn in a way that felt right. Social Catalyst helped me find that voice, and then made sure it showed up every single week.",
     author: "Biola Babawale",
     authorRole: "Founder, Cycle Together",
     accent: "#1f8a66",

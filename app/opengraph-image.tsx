@@ -10,7 +10,7 @@ import { ImageResponse } from "next/og";
 // plain markup and inline SVG.
 
 export const alt =
-  "Soch: social media marketing for B2B and growing businesses";
+  "Social Catalyst: social media marketing for B2B and growing businesses";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -42,7 +42,7 @@ export default function OpengraphImage() {
               color: "#1c2b26",
             }}
           >
-            Soch
+            Social Catalyst
           </span>
         </div>
 
@@ -68,7 +68,7 @@ export default function OpengraphImage() {
               color: "#4c534f",
             }}
           >
-            Instagram · LinkedIn · Google · reviews, from €290/month
+            Instagram · LinkedIn · Google · reviews — get a quote
           </div>
         </div>
 

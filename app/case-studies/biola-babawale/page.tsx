@@ -3,9 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { StatCounter } from "@/components/StatCounter";
 
 export const metadata: Metadata = {
-  title: "Biola Babawale, Cycle Together | Signal House Case Study",
+  title: "Biola Babawale, Cycle Together | Social Catalyst Case Study",
   description:
-    "How Signal House gave Cycle Together founder Biola Babawale the LinkedIn presence her mission deserved: 3× follower growth, 5+ partnership conversations, and 100% content consistency.",
+    "How Social Catalyst gave Cycle Together founder Biola Babawale the LinkedIn presence her mission deserved: 3× follower growth, 5+ partnership conversations, and 100% content consistency.",
 };
 
 const HERO_STATS = [
@@ -198,7 +198,7 @@ export default function BiolaBabawale() {
                   reach, corporate sponsors, sport and wellness organisations,
                   community funders, and like-minded founders, had no easy way
                   to find her or understand what Cycle Together stood for. She came to
-                  Signal House to fix that. Not to grow follower numbers for their own sake, but
+                  Social Catalyst to fix that. Not to grow follower numbers for their own sake, but
                   to make her LinkedIn presence do actual work for her mission.
                 </p>
               </div>
@@ -266,7 +266,7 @@ export default function BiolaBabawale() {
                     >
                       I had so much to say about what we&rsquo;re building, but I
                       couldn&rsquo;t figure out how to say it on LinkedIn in a way
-                      that felt right. Signal House helped me find that voice, and
+                      that felt right. Social Catalyst helped me find that voice, and
                       then made sure it showed up every single week.
                     </p>
                     <figcaption className="mt-5 border-t border-dashed border-line pt-5">

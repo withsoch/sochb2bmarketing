@@ -10,7 +10,7 @@ import { PACKAGES, PACKAGE_TERMS, PRICING_FAQS } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Packages & Pricing for B2B and Growing Businesses",
   description:
-    "Five packages for B2B and growing businesses, starting from €290 a month excl. VAT. Social media, Google, reviews, LinkedIn outreach and ads. Get a quote.",
+    "Five packages for B2B and growing businesses. Social media, Google, reviews, LinkedIn outreach and ads. Get a quote.",
 };
 
 const CORE = PACKAGES.filter((p) => p.track === "core");
@@ -38,8 +38,8 @@ export default function PackagesPage() {
               <Reveal delay={0.1}>
                 <p className="lead mt-5">
                   Pick the package that matches where your business is today.
-                  Every price below is a starting point. Get a quote and
-                  we&apos;ll confirm the exact fit for your business.
+                  Get a quote and we&apos;ll confirm the exact fit and price
+                  for your business.
                 </p>
               </Reveal>
 

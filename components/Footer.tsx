@@ -12,7 +12,9 @@ export function Footer() {
         {/* link columns */}
         <div className="grid gap-8 py-10 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.85fr_1.15fr_1fr]">
           <div className="max-w-xs">
-            <Logo variant="light" imgClassName="h-8 w-auto" />
+            <div className="inline-flex rounded-lg bg-white p-2">
+              <Logo imgClassName="h-8 w-auto" />
+            </div>
             <p className="mt-4 text-sm leading-relaxed text-white/60">
               {SITE.tagline}
             </p>
@@ -48,7 +50,7 @@ export function Footer() {
               href={SITE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Soch on LinkedIn"
+              aria-label="Social Catalyst on LinkedIn"
               className="inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ring-white/15 text-white/80 transition-colors hover:bg-white/10 hover:text-white"
             >
               <Icon name="social" className="h-5 w-5" />

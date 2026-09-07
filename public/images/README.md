@@ -8,7 +8,7 @@ mockup blocks and initials discs). Nothing breaks, nothing shows a broken-image 
 
 | Folder    | What goes here                                  | Shape                  |
 | --------- | ----------------------------------------------- | ---------------------- |
-| `team/`   | Headshots / candids of the Soch team             | Square, ~800×800       |
+| `team/`   | Headshots / candids of the Social Catalyst team   | Square, ~800×800       |
 | `food/`   | Food & venue photography used in the mockups     | Landscape ~1200×900, or square for the grid |
 | `venues/` | Photos of a specific named client venue          | Portrait, ~900×1200    |
 

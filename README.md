@@ -1,6 +1,6 @@
-# Soch - Website
+# Social Catalyst - Website
 
-Marketing site for **Soch**, a marketing agency for restaurants, cafes and
+Marketing site for **Social Catalyst**, a marketing agency for restaurants, cafes and
 shisha lounges — Instagram, Google Business Profile, review management, AI
 content, one-page websites, Wolt & Bolt Food listings, and paid ads. Piloting
 in Tallinn, Estonia.
@@ -37,14 +37,14 @@ Copy `.env.example` to `.env.local` and fill in the real values before launch:
 
 `lib/content.ts` contains placeholder testimonials and client logos for
 restaurants/cafes/shisha lounges, all clearly labeled — replace them with
-real venue results before launch. The logo in `components/Logo.tsx` is a
-vector placeholder (no real brand artwork exists yet) and can be swapped for
-real assets without touching any call sites.
+real venue results before launch. The logo in `components/Logo.tsx` reads
+from `public/logos/social-catalyst-logo.png` and can be swapped for an
+updated file without touching any call sites.
 
 ## Case studies
 
 The 4 pages under `/case-studies` (linked from the main nav) are **real**
-Signal House / Soch Catalyst client engagements (Gaia Ferrero/Byzantine,
+Social Catalyst client engagements (Gaia Ferrero/Byzantine,
 Biola Babawale/Cycle Together, Shahzad Akhtar/Strateasy Consulting, Kaitlin
 Malaspina/Brenna & Co.), reused here with internal sign-off — not restaurant
 work, and not placeholders. Each is a standalone page under

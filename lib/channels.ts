@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------
-//  Soch - the channels we actually run for B2B and growing businesses.
+//  Social Catalyst - the channels we actually run for B2B and growing businesses.
 //  One list, shared by the homepage platform strip, the footer column
 //  and the hero animation, so the platforms we name never drift apart.
 // ------------------------------------------------------------------

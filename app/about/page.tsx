@@ -12,7 +12,7 @@ import { TEAM } from "@/lib/content";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Soch runs Instagram, LinkedIn, Google and reviews for B2B and growing businesses.",
+    "Social Catalyst runs Instagram, LinkedIn, Google and reviews for B2B and growing businesses.",
 };
 
 const VALUES: { icon: IconName; title: string; body: string }[] = [
@@ -54,7 +54,7 @@ export default function AboutPage() {
                 <p className="lead mt-6 max-w-2xl">
                   Most marketing agencies serve everyone with the same
                   generic playbook: a content calendar, a posting schedule,
-                  and not much else. We built Soch to treat Google, reviews
+                  and not much else. We built Social Catalyst to treat Google, reviews
                   and LinkedIn outreach as seriously as the Instagram feed,
                   because that&apos;s where B2B business actually gets decided.
                 </p>
@@ -108,7 +108,7 @@ export default function AboutPage() {
                 reviews and outreach as seriously as the Instagram feed.
               </p>
               <p className="font-medium text-ink">
-                Soch was built to do that work.
+                Social Catalyst was built to do that work.
               </p>
             </div>
           </Reveal>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                     here and the fallback disc stays out of the a11y tree */}
                 <Avatar
                   src="https://cdn.prod.website-files.com/68e7ded517d0693d2c345250/694e751734d7a4afc68e2e60_Rizwan%20founder.webp"
-                  name={TEAM[0]?.name ?? "The Soch team"}
+                  name={TEAM[0]?.name ?? "The Social Catalyst team"}
                   initials="S"
                   size={64}
                   captioned
@@ -136,7 +136,7 @@ export default function AboutPage() {
                 />
                 <span className="leading-tight">
                   <span className="block text-sm font-semibold text-ink">
-                    The Soch team
+                    The Social Catalyst team
                   </span>
                   <span className="block text-xs text-muted">
                     Your B2B marketing partners
@@ -170,7 +170,7 @@ export default function AboutPage() {
                 <Reveal key={m.name} delay={(i % 3) * 0.08}>
                   <Photo
                     src={m.photo}
-                    alt={`${m.name}, ${m.role} at Soch`}
+                    alt={`${m.name}, ${m.role} at Social Catalyst`}
                     ratio="1/1"
                     sizes="(min-width: 1024px) 22rem, (min-width: 640px) 45vw, 100vw"
                     className="w-full rounded-2xl bg-cream ring-1 ring-line"

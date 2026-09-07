@@ -3,9 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { StatCounter } from "@/components/StatCounter";
 
 export const metadata: Metadata = {
-  title: "Gaia Ferrero, Byzantine | Signal House Case Study",
+  title: "Gaia Ferrero, Byzantine | Social Catalyst Case Study",
   description:
-    "How Signal House rebuilt Gaia Ferrero's LinkedIn presence from the ground up, generating 100% posting consistency, 4× profile view growth, and 12+ qualified inbound conversations in 90 days.",
+    "How Social Catalyst rebuilt Gaia Ferrero's LinkedIn presence from the ground up, generating 100% posting consistency, 4× profile view growth, and 12+ qualified inbound conversations in 90 days.",
 };
 
 const HERO_STATS = [
@@ -195,7 +195,7 @@ export default function GaiaAntonescuPage() {
                   Her profile still read like a CV from three years ago.
                 </p>
                 <p>
-                  She came to Signal House not because she didn&rsquo;t understand LinkedIn, but
+                  She came to Social Catalyst not because she didn&rsquo;t understand LinkedIn, but
                   because she understood it well enough to know she wasn&rsquo;t doing it
                   justice. She needed a partner who could take full ownership of her
                   presence, strategy, content, and outreach, so she could
@@ -267,7 +267,7 @@ export default function GaiaAntonescuPage() {
                       style={{ fontFamily: "var(--font-display)", fontWeight: 500 }}
                     >
                       I knew what good LinkedIn looked like. I just couldn&rsquo;t
-                      make it happen alongside everything else. Handing it to Signal House
+                      make it happen alongside everything else. Handing it to Social Catalyst
                       was the right call. Within a few weeks it felt like my
                       profile finally sounded like me.
                     </p>

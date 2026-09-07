@@ -15,7 +15,7 @@ export function SchedulerEmbed() {
       <div className="overflow-hidden rounded-3xl border border-line bg-white shadow-[var(--shadow-soft)]">
         <iframe
           src={SCHEDULER_URL}
-          title="Book a call with Soch"
+          title="Book a call with Social Catalyst"
           className="h-[680px] w-full"
           loading="lazy"
         />

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-Marketing site for **Soch**, a marketing agency for restaurants, cafes and
+Marketing site for **Social Catalyst**, a marketing agency for restaurants, cafes and
 shisha lounges — Instagram, Google Business Profile, review management, AI
 content, one-page websites, Wolt & Bolt Food listings, and paid ads. Piloting
 in Tallinn, Estonia. Next.js 16 (App Router) · React 19 · TypeScript ·
@@ -51,8 +51,8 @@ TikTok) shared by the homepage platform strip, footer, and hero animation.
 
 **Case studies are the one exception to that rule.** The four pages under
 `app/case-studies/<slug>/page.tsx` (`gaia-antonescu`, `biola-babawale`,
-`shahzad-akhtar`, `kaitlin-malaspina`) are real Signal House / Soch Catalyst
-client engagements, each a fully standalone page with its own local
+`shahzad-akhtar`, `kaitlin-malaspina`) are real Social Catalyst client
+engagements, each a fully standalone page with its own local
 `HERO_STATS` / `META` / `PROBLEMS` / `FRAMEWORK` / `RESULTS` consts — not
 data-driven. The `CASE_STUDIES` array in `lib/content.ts` is a *separate,
 parallel* summary of the same four engagements that only feeds the homepage
@@ -72,9 +72,8 @@ watches for `?book=true` / `?audit=true` query params (used by outbound links)
 and triggers the same two flows on page load.
 
 **Design tokens live in `app/globals.css`** under a Tailwind v4 `@theme` block
-(`--color-brand`, `--color-ink`, `--color-mist`, channel-badge colors, etc.),
-shared with the sibling "Soch Catalyst" site — change tokens there, not with
-inline hex values, to keep the two sites' palettes able to diverge cleanly.
+(`--color-brand`, `--color-ink`, `--color-mist`, channel-badge colors, etc.) —
+change tokens there, not with inline hex values.
 `components/StatCounter.tsx` (animated count-up, integer values only — see
 its rounding) and `components/ui/Reveal.tsx` (scroll-triggered fade+rise,
 respects reduced-motion) are the two animation primitives reused across

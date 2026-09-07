@@ -3,9 +3,9 @@ import { Reveal } from "@/components/ui/Reveal";
 import { StatCounter } from "@/components/StatCounter";
 
 export const metadata: Metadata = {
-  title: "Kaitlin Malaspina, Brenna & Co. | Signal House Case Study",
+  title: "Kaitlin Malaspina, Brenna & Co. | Social Catalyst Case Study",
   description:
-    "How Signal House made Brenna & Co.'s distinctive Private Operating House offer legible to the right founders: 3× profile view growth, 22% outreach reply rate, and 8 qualified conversations in 12 weeks.",
+    "How Social Catalyst made Brenna & Co.'s distinctive Private Operating House offer legible to the right founders: 3× profile view growth, 22% outreach reply rate, and 8 qualified conversations in 12 weeks.",
 };
 
 const HERO_STATS = [
@@ -203,7 +203,7 @@ export default function KaitlinMalaspinaPage() {
                 <p>
                   But LinkedIn was not converting at the level the work deserved. The right founders
                   were on LinkedIn every day. They were just not finding her before they had already
-                  found someone else, or decided to keep carrying it alone. She came to Signal House to build
+                  found someone else, or decided to keep carrying it alone. She came to Social Catalyst to build
                   the infrastructure that matched what the firm had already built in the real world.
                 </p>
               </div>
@@ -452,7 +452,7 @@ export default function KaitlinMalaspinaPage() {
                   >
                     It is somewhat ironic that the person who builds operational
                     infrastructure for founders had not built the right infrastructure
-                    for her own channel. Signal House fixed that. And they did it without
+                    for her own channel. Social Catalyst fixed that. And they did it without
                     changing what Brenna and Co. is. They just made it visible to
                     the right people at the right moment.
                   </p>
