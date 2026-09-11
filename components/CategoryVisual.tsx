@@ -18,7 +18,7 @@ const REVIEWS_VARIATION_IMAGE = {
 };
 
 const SOCIAL_MEDIA_IMAGE = {
-  src: "/Service Images/social-media-feed.png",
+  src: "/Service Images/social-media-feed.webp",
   alt: "Browsing a business's content on Instagram",
   caption: "Engaging content on social media",
 };
