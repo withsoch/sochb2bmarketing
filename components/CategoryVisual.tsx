@@ -13,8 +13,8 @@ const REVIEWS_IMAGE = {
 
 const REVIEWS_VARIATION_IMAGE = {
   src: "/Service Images/reviews-from-customer.webp",
-  alt: "Customer checking phone for a review variation",
-  caption: "Variation view of customer reviews",
+  alt: "Waiter taking an order from customers at a café table",
+  caption: "Ask at the table, while they are happy",
 };
 
 const SOCIAL_MEDIA_IMAGE = {
@@ -23,39 +23,62 @@ const SOCIAL_MEDIA_IMAGE = {
   caption: "Engaging content on social media",
 };
 
-const LINKEDIN_GALLERY: { src: string; alt: string }[] = [
-  { src: "/Service Images/delivery-app-shawarma.webp", alt: "Company page rebuilt with a clear offer" },
-  { src: "/Service Images/delivery-apps-Grill Burger.webp", alt: "Founder profile rebuilt properly" },
-  { src: "/Service Images/delivery-apps-Lemonade.webp", alt: "Outreach message templates, personalised" },
+// `alt` describes the photograph for a screen reader; `caption` is the line
+// printed underneath it. They are separate because the two jobs differ — the
+// caption names the client, the alt names what is in the picture.
+const LINKEDIN_GALLERY: { src: string; alt: string; caption: string }[] = [
+  {
+    src: "/Service Images/delivery-app-shawarma.webp",
+    alt: "Chicken wrap and salad on a plate",
+    caption: "Takeaway client",
+  },
+  {
+    src: "/Service Images/delivery-apps-Grill Burger.webp",
+    alt: "Mixed grill platter with skewers and dips",
+    caption: "Grill house client",
+  },
+  {
+    src: "/Service Images/delivery-apps-Lemonade.webp",
+    alt: "Iced lemonade with mint and lemon slices",
+    caption: "Café client",
+  },
 ];
 
 function LinkedInGallery() {
   return (
-    <div className="mt-3.5 grid grid-cols-1 gap-3 sm:grid-cols-3">
-      {LINKEDIN_GALLERY.map((img) => (
-        <figure key={img.src}>
-          <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-line">
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              sizes="(min-width: 640px) 33vw, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <figcaption className="mt-1.5 text-center text-[0.65rem] leading-snug text-muted">
-            {img.alt}
-          </figcaption>
-        </figure>
-      ))}
+    <div className="mt-4">
+      {/* Without this line the three photos read as stray food on a LinkedIn
+          card. It says whose businesses they are, which is what makes the
+          outreach figures above them mean something. */}
+      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-muted">
+        Who we run it for
+      </p>
+      <div className="mt-2.5 grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {LINKEDIN_GALLERY.map((img) => (
+          <figure key={img.src}>
+            <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-line">
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <figcaption className="mt-1.5 text-center text-[0.65rem] leading-snug text-muted">
+              {img.caption}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </div>
   );
 }
 
 const AI_CONTENT_GALLERY: { src: string; alt: string }[] = [
   { src: "/Service Images/ai-content-1.webp", alt: "Plated dish, styled for social content" },
-  { src: "/Service Images/ai-content-2.webp", alt: "Product spread on a wooden table" },
-  { src: "/Service Images/ai-content-3.webp", alt: "Glass cup of tea or coffee" },
+  { src: "/Service Images/ai-content-2.webp", alt: "Seafood dishes shot from above" },
+  { src: "/Service Images/ai-content-3.webp", alt: "Iced coffee on the counter" },
   { src: "/Service Images/ai-content-4.webp", alt: "Cozy interior lounge space" },
   { src: "/Service Images/ai-content-5.webp", alt: "Styled product close-up with drizzle" },
 ];
