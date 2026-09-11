@@ -23,8 +23,9 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// Placeholder domain, replace with the real one before launch.
-const SITE_URL = "https://socialcatalyst.co";
+// The live domain. metadataBase resolves every canonical and og:url against
+// this, so it has to match what the site is actually served on.
+const SITE_URL = "https://www.withsocialcatalyst.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
