@@ -6,13 +6,13 @@ import Image from "next/image";
 import { Icon } from "@/components/Icons";
 
 const REVIEWS_IMAGE = {
-  src: "/Service Images/reviews-qr-coffee.png",
+  src: "/Service Images/reviews-qr-coffee.webp",
   alt: "Customer scanning QR code to leave a review",
   caption: "Quick QR reviews, no awkward ask",
 };
 
 const REVIEWS_VARIATION_IMAGE = {
-  src: "/Service Images/reviews-from-customer.png",
+  src: "/Service Images/reviews-from-customer.webp",
   alt: "Customer checking phone for a review variation",
   caption: "Variation view of customer reviews",
 };
@@ -24,9 +24,9 @@ const SOCIAL_MEDIA_IMAGE = {
 };
 
 const LINKEDIN_GALLERY: { src: string; alt: string }[] = [
-  { src: "/Service Images/delivery-app-shawarma.png", alt: "Company page rebuilt with a clear offer" },
-  { src: "/Service Images/delivery-apps-Grill Burger.png", alt: "Founder profile rebuilt properly" },
-  { src: "/Service Images/delivery-apps-Lemonade.png", alt: "Outreach message templates, personalised" },
+  { src: "/Service Images/delivery-app-shawarma.webp", alt: "Company page rebuilt with a clear offer" },
+  { src: "/Service Images/delivery-apps-Grill Burger.webp", alt: "Founder profile rebuilt properly" },
+  { src: "/Service Images/delivery-apps-Lemonade.webp", alt: "Outreach message templates, personalised" },
 ];
 
 function LinkedInGallery() {
@@ -53,11 +53,11 @@ function LinkedInGallery() {
 }
 
 const AI_CONTENT_GALLERY: { src: string; alt: string }[] = [
-  { src: "/Service Images/ai-content-1.png", alt: "Plated dish, styled for social content" },
-  { src: "/Service Images/ai-content-2.png", alt: "Product spread on a wooden table" },
-  { src: "/Service Images/ai-content-3.png", alt: "Glass cup of tea or coffee" },
-  { src: "/Service Images/ai-content-4.png", alt: "Cozy interior lounge space" },
-  { src: "/Service Images/ai-content-5.png", alt: "Styled product close-up with drizzle" },
+  { src: "/Service Images/ai-content-1.webp", alt: "Plated dish, styled for social content" },
+  { src: "/Service Images/ai-content-2.webp", alt: "Product spread on a wooden table" },
+  { src: "/Service Images/ai-content-3.webp", alt: "Glass cup of tea or coffee" },
+  { src: "/Service Images/ai-content-4.webp", alt: "Cozy interior lounge space" },
+  { src: "/Service Images/ai-content-5.webp", alt: "Styled product close-up with drizzle" },
 ];
 
 function AiContentGallery() {
@@ -102,15 +102,15 @@ function ChannelDot({ color }: { color: string }) {
 
 const GOOGLE_GALLERY: { src: string; alt: string }[] = [
   {
-    src: "/Service Images/google-20260825-142103.png",
+    src: "/Service Images/google-20260825-142103.webp",
     alt: "Google Business Profile setup illustration",
   },
   {
-    src: "/Service Images/google-20260825-142523.png",
+    src: "/Service Images/google-20260825-142523.webp",
     alt: "Google Maps visibility optimization graphic",
   },
   {
-    src: "/Service Images/google-show-up-when-someone-two-streets-away-searches-for-dinner-.png",
+    src: "/Service Images/google-show-up-when-someone-two-streets-away-searches-for-dinner-.webp",
     alt: "Local business visibility when searched nearby",
   },
 ];
@@ -302,7 +302,7 @@ function AiContentVisual() {
       <div className={`${card} overflow-hidden animate-float-a`}>
         <div className="relative aspect-[16/9] w-full">
           <Image
-            src="/Service Images/ai-content-feature.png"
+            src="/Service Images/ai-content-feature.webp"
             alt=""
             fill
             sizes="(min-width: 1024px) 28rem, 100vw"
@@ -339,7 +339,7 @@ function FoundationsVisual() {
         </div>
         <div className="relative aspect-[16/10] w-full">
           <Image
-            src="/Service Images/foundations-20260825-160006.png"
+            src="/Service Images/foundations-20260825-160006.webp"
             alt="Cozy modern interior with warm lighting and plants"
             fill
             sizes="(min-width: 1024px) 28rem, 100vw"
@@ -380,17 +380,17 @@ function LinkedInVisual() {
       name: "Connection requests sent",
       value: "42",
       tag: "This week",
-      image: "/Service Images/delivery-app-shawarma.png",
+      image: "/Service Images/delivery-app-shawarma.webp",
     },
     {
       name: "Replies received",
       value: "11",
-      image: "/Service Images/delivery-apps-Grill Burger.png",
+      image: "/Service Images/delivery-apps-Grill Burger.webp",
     },
     {
       name: "Calls booked",
       value: "3",
-      image: "/Service Images/delivery-apps-Lemonade.png",
+      image: "/Service Images/delivery-apps-Lemonade.webp",
     },
   ];
   return (

@@ -77,7 +77,7 @@ export default function PackagesPage() {
             <Reveal delay={0.15} className="h-full">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:h-full lg:min-h-[480px]">
                 <Image
-                  src="/Service Images/packages-hero-cafe.png"
+                  src="/Service Images/packages-hero-cafe.webp"
                   alt="Cozy interior with warm lighting and people meeting"
                   fill
                   priority

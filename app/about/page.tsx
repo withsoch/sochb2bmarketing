@@ -72,7 +72,7 @@ export default function AboutPage() {
             <Reveal delay={0.15} className="h-full">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:h-full lg:min-h-[480px]">
                 <Image
-                  src="/Service Images/about-hero-restaurant-cafe.png"
+                  src="/Service Images/about-hero-restaurant-cafe.webp"
                   alt="Cozy interior with warm sunlight and a table"
                   fill
                   priority
