@@ -18,23 +18,31 @@ This is the order we work in, and the reasoning behind it.
 
 There is a difference between someone who might like your restaurant and someone who wants dinner in the next thirty minutes. The second person is worth far more, and they behave in a completely predictable way: they open Maps or a delivery app, they look at what is close, and they pick.
 
+![Someone checking a map on their phone on a city street](/blog/restaurant-marketing-that-fills-tables-maps.webp)
+
+*The decision happens here, on a phone, within a few hundred metres of your door.*
+
 That moment is not a branding exercise. It is a comparison. Your listing is sitting next to four competitors, and the person is deciding on photos, rating, distance, and whether you look open.
 
 So the first question is not "what should we post this week". It is: **when someone two streets away searches for dinner, what do they see?**
 
-Go and look. On your phone, not your laptop. Search the way a stranger would — "restaurant near me", "lunch Tallinn", your cuisine plus your district — and look at what comes back. That is your actual shopfront.
+Go and look. On your phone, not your laptop. Search the way a stranger would. Try "restaurant near me", then "lunch Tallinn", then your cuisine plus your district, and look at what comes back. That is your actual shopfront.
 
 ## Fix the Google listing before anything else
 
 A Google Business Profile is the cheapest marketing a restaurant has, and it is almost always the most neglected. It is free, it appears above your website, and most of it can be fixed in an afternoon.
 
+![A warmly lit restaurant seen from the street at night](/blog/restaurant-marketing-that-fills-tables-storefront.webp)
+
+*Your photos have to make the place recognisable from the pavement. Most listings only have the logo.*
+
 What to check, in order of how much damage it does when it is wrong:
 
 - **Opening hours, including holidays.** Wrong hours do not just lose you one visit. Google asks people who went "is this place actually open?", and a profile that keeps getting corrected gets shown less.
-- **Photos.** Not ten photos of the logo. The room, the food, the front of the building so people recognise it from the street. Dark, blurry phone photos read as a dark, tired restaurant.
+- **Photos.** Not ten photos of the logo. The room, the food, and the front of the building so people recognise it from the street. Dark, blurry phone photos read as a dark, tired restaurant.
 - **The category.** "Restaurant" is not the same as "Georgian restaurant" or "brunch spot". The specific one is how you appear in specific searches.
 - **The menu and price range.** People filter on both.
-- **Whether you look open.** Delivery, dine-in, takeaway, outdoor seating — every attribute is a filter somebody is using.
+- **Whether you look open.** Delivery, dine-in, takeaway, outdoor seating. Every attribute there is a filter somebody is using.
 
 None of this is clever. It is maintenance. It is also the single highest-return hour anybody at a restaurant can spend on marketing.
 
@@ -44,7 +52,11 @@ Most restaurant owners think about reviews when a bad one arrives. That is the w
 
 Your rating is an average. A restaurant with eleven reviews and a 4.3 is one bad night away from a 4.0. A restaurant with three hundred reviews and a 4.3 is stable, and looks more trustworthy at the same score, because the number of reviews is itself a signal.
 
-The fix is not to chase five stars. It is to ask far more often, so that the ordinary happy customers — the silent majority who would never think to post — are represented at all. Right now your reviews are mostly written by people with a strong feeling in one direction or the other.
+The fix is not to chase five stars. It is to ask far more often, so that the ordinary happy customers are represented at all. Those are the silent majority, the ones who enjoyed their meal and would never think to post about it. Right now your reviews are written mostly by people who felt strongly in one direction or the other.
+
+![A customer paying by card at a restaurant counter](/blog/restaurant-marketing-that-fills-tables-reviews.webp)
+
+*The best moment to ask is the one you already have with every customer.*
 
 Two things that work:
 
@@ -57,23 +69,31 @@ On bad reviews: answer quickly, take it off the public thread, and never argue. 
 
 If you are on Wolt or Bolt Food, you are competing in a ranked list, and the ranking is not random. Photography, item naming, category placement, availability and response time all move it.
 
-Most restaurants set the listing up once, during the stress of launching, and never touch it again. The menu drifts. Half the items have no photo. Items that sell out stay listed. The listing quietly sinks.
+![A delivery courier with a thermal backpack on a scooter](/blog/restaurant-marketing-that-fills-tables-delivery.webp)
 
-Treat it like a shop window that is open every night:
+*A delivery listing is a shop window that is open every night, and most are set up once and never touched again.*
 
-- Every item that makes money should have a photograph. Items without photos are ordered far less, which is a self-fulfilling prophecy once the app learns they do not sell.
+Most restaurants set the listing up during the stress of launching and then leave it. The menu drifts. Half the items have no photo. Items that sell out stay listed. The listing quietly sinks.
+
+Treat it like the shop window it is:
+
+- Every item that makes money should have a photograph. Items without photos are ordered far less, which becomes self-fulfilling once the app learns they do not sell.
 - Name things the way people search for them, not the way they appear on your printed menu.
 - Turn off what you have run out of, immediately. A cancelled order costs you the order and the ranking.
 
 ## Then, and only then, social media
 
-Once the listing is right and the reviews are coming in, social is worth real effort — because now it has somewhere to send people.
+Once the listing is right and the reviews are coming in, social is worth real effort, because now it has somewhere to send people.
+
+![Someone photographing a plated dish with a phone](/blog/restaurant-marketing-that-fills-tables-social.webp)
+
+*Rhythm beats production value. Two posts a week, every week, reads as a business that is open.*
 
 The part that matters most is not creativity. It is **rhythm**. A feed that posts four times in one week and then goes quiet for three weeks reads as a business that might have closed. A feed that posts twice a week, every week, forever, reads as a business that is open and busy. The second one is easier and works better.
 
-For Tallinn specifically: post in Estonian and English. Not one translated into the other underneath — write both, short. Your customers are locals and visitors, and you lose the visitor entirely if everything is in Estonian, and you look like a chain if everything is in English.
+For Tallinn specifically: post in Estonian and English. Not one translated into the other underneath. Write both, and keep both short. Your customers are locals and visitors, and you lose the visitor entirely if everything is in Estonian, while you look like a chain if everything is in English.
 
-What is actually worth posting, roughly in order: the food, the room, the people who work there, and the things that change — specials, seasons, a new dish, a busy Friday. Nobody follows a restaurant for marketing. They follow it to be reminded that it exists, at the moment they are deciding where to eat.
+What is actually worth posting, roughly in order: the food, the room, the people who work there, and the things that change, such as specials, seasons, a new dish, a busy Friday. Nobody follows a restaurant for marketing. They follow it to be reminded that it exists, at the moment they are deciding where to eat.
 
 ## The order, on one line
 
