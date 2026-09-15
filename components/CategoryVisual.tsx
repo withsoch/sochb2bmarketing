@@ -12,8 +12,8 @@ const REVIEWS_IMAGE = {
 };
 
 const REVIEWS_VARIATION_IMAGE = {
-  src: "/Service Images/reviews-star-rating.webp",
-  alt: "A curved row of small glitter stars",
+  src: "/Service Images/reviews-customer-rating.webp",
+  alt: "A phone with a five-star customer review above it",
   caption: "Five-star reviews that keep coming in",
 };
 
