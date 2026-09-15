@@ -13,9 +13,9 @@ import {
   getHeadings,
   slugifyHeading,
 } from "@/lib/blog";
-import { PageHero } from "@/components/PageHero";
 import { ArticleToc } from "@/components/ArticleToc";
 import { Section } from "@/components/ui/Section";
+import { Reveal } from "@/components/ui/Reveal";
 import { CtaBand } from "@/components/CtaBand";
 
 export function generateStaticParams() {
@@ -54,6 +54,16 @@ function nodeText(node: ReactNode): string {
   return "";
 }
 
+/** Whole minutes at ~220 words a minute, never less than one. Kept here rather
+ *  than in lib/blog, which has to stay identical across the Soch sites. */
+function readingMinutes(body: string): number {
+  const words = body
+    .replace(/!\[[^\]]*\]\([^)]*\)/g, " ") // images carry no reading time
+    .split(/\s+/)
+    .filter(Boolean).length;
+  return Math.max(1, Math.round(words / 220));
+}
+
 export default async function BlogDetailPage({
   params,
 }: {
@@ -68,24 +78,53 @@ export default async function BlogDetailPage({
 
   const headings = getHeadings(post.body);
   const hasToc = headings.length > 1;
-  const meta = [post.category, formatPostDate(post.date)].filter(Boolean).join("  ·  ");
+  const readingTime = readingMinutes(post.body);
 
   return (
     <main className="flex-1">
-      <PageHero title={post.title} intro={meta} />
+      {/* Split hero: text left, contained image right, on the tinted mist ground. */}
+      <section className="border-b border-line bg-mist">
+        <div
+          className={`container-x grid grid-cols-1 items-center gap-10 py-10 sm:py-12 lg:gap-14 lg:py-14 ${
+            post.image ? "lg:grid-cols-2" : ""
+          }`}
+        >
+          <Reveal>
+            <div className="flex max-w-2xl flex-col gap-4">
+              {post.category && <span className="eyebrow w-fit">{post.category}</span>}
+              <h1 className="text-h2">{post.title}</h1>
+              <div className="flex flex-wrap items-center gap-2 text-sm text-slate">
+                {post.date && (
+                  <>
+                    <span>{formatPostDate(post.date)}</span>
+                    <span aria-hidden="true">&middot;</span>
+                  </>
+                )}
+                <span>{readingTime} min read</span>
+              </div>
+            </div>
+          </Reveal>
 
-      {post.image && (
-        <Section pad="tight" className="bg-white">
-          <div className="relative mx-auto aspect-[16/9] w-full max-w-4xl overflow-hidden rounded-xl border border-line bg-mist">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={post.image}
-              alt={post.title}
-              className="absolute inset-0 h-full w-full object-cover"
-            />
-          </div>
-        </Section>
-      )}
+          {post.image && (
+            <Reveal delay={0.1}>
+              {/* A static visual, so it carries a resting shadow (unlike the index cards).
+                  Plain <img> for the same reason as BlogCard: pipeline images can live
+                  on hosts next/image isn't configured for. */}
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-line bg-white shadow-card">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={post.image}
+                  alt={post.title}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              </div>
+            </Reveal>
+          )}
+        </div>
+      </section>
 
       <Section className="bg-white">
         <div

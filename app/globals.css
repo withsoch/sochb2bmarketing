@@ -110,6 +110,13 @@
     line-height: 1.16;
     font-weight: 600;
   }
+  /* Featured blog card title - a step up from .text-h3, which stays as-is site-wide. */
+  .text-h3-feature {
+    font-size: clamp(1.625rem, 1.35rem + 1.1vw, 2.25rem);
+    line-height: 1.12;
+    letter-spacing: -0.013em;
+    font-weight: 500;
+  }
   .lead {
     font-size: clamp(1.075rem, 1rem + 0.4vw, 1.28rem);
     line-height: 1.62;
