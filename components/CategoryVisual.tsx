@@ -6,15 +6,15 @@ import Image from "next/image";
 import { Icon } from "@/components/Icons";
 
 const REVIEWS_IMAGE = {
-  src: "/Service Images/reviews-phone.webp",
-  alt: "Client writing a review on their phone",
+  src: "/Service Images/reviews-phone-typing.webp",
+  alt: "Client typing a review on their phone",
   caption: "A simple ask after every project",
 };
 
 const REVIEWS_VARIATION_IMAGE = {
-  src: "/Service Images/reviews-happy-client.webp",
-  alt: "Client and consultant celebrating at a desk",
-  caption: "Ask when the work wraps, while they are happy",
+  src: "/Service Images/reviews-five-stars.webp",
+  alt: "A row of five yellow stars",
+  caption: "Five-star reviews that keep coming in",
 };
 
 const SOCIAL_MEDIA_IMAGE = {
@@ -79,8 +79,8 @@ const AI_CONTENT_GALLERY: { src: string; alt: string }[] = [
   { src: "/Service Images/ai-content-notebook-flatlay.webp", alt: "Product flat lay, styled for social content" },
   { src: "/Service Images/ai-content-team-meeting.webp", alt: "Your team at work in the office" },
   { src: "/Service Images/ai-content-desk-flatlay.webp", alt: "Workspace shot from above" },
-  { src: "/Service Images/ai-content-standing-desk.webp", alt: "Workspace detail for the feed" },
-  { src: "/Service Images/ai-content-filming-phone.webp", alt: "Short video filmed on a phone" },
+  { src: "/Service Images/ai-content-moodboard-desk.webp", alt: "Workspace detail for the feed" },
+  { src: "/Service Images/ai-content-filming-restaurant.webp", alt: "Short video filmed in a restaurant" },
 ];
 
 function AiContentGallery() {
@@ -133,8 +133,8 @@ const GOOGLE_GALLERY: { src: string; alt: string }[] = [
     alt: "Google search open on a phone",
   },
   {
-    src: "/Service Images/google-local-business-owner.webp",
-    alt: "Local business owner in their shop",
+    src: "/Service Images/google-review-card.webp",
+    alt: "A Google \"Leave a review\" card with five stars",
   },
 ];
 
