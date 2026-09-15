@@ -6,20 +6,20 @@ import Image from "next/image";
 import { Icon } from "@/components/Icons";
 
 const REVIEWS_IMAGE = {
-  src: "/Service Images/reviews-qr-coffee.webp",
-  alt: "Customer scanning QR code to leave a review",
-  caption: "Quick QR reviews, no awkward ask",
+  src: "/Service Images/reviews-phone.webp",
+  alt: "Client writing a review on their phone",
+  caption: "A simple ask after every project",
 };
 
 const REVIEWS_VARIATION_IMAGE = {
-  src: "/Service Images/reviews-from-customer.webp",
-  alt: "Waiter taking an order from customers at a café table",
-  caption: "Ask at the table, while they are happy",
+  src: "/Service Images/reviews-happy-client.webp",
+  alt: "Client and consultant celebrating at a desk",
+  caption: "Ask when the work wraps, while they are happy",
 };
 
 const SOCIAL_MEDIA_IMAGE = {
-  src: "/Service Images/social-media-feed.webp",
-  alt: "Browsing a business's content on Instagram",
+  src: "/Service Images/social-media-phone.webp",
+  alt: "Checking a business's social feed on a phone",
   caption: "Engaging content on social media",
 };
 
@@ -28,26 +28,26 @@ const SOCIAL_MEDIA_IMAGE = {
 // caption names the client, the alt names what is in the picture.
 const LINKEDIN_GALLERY: { src: string; alt: string; caption: string }[] = [
   {
-    src: "/Service Images/delivery-app-shawarma.webp",
-    alt: "Chicken wrap and salad on a plate",
-    caption: "Takeaway client",
+    src: "/Service Images/linkedin-office.webp",
+    alt: "Bright open-plan office with plants",
+    caption: "Consulting client",
   },
   {
-    src: "/Service Images/delivery-apps-Grill Burger.webp",
-    alt: "Mixed grill platter with skewers and dips",
-    caption: "Grill house client",
+    src: "/Service Images/linkedin-laptop.webp",
+    alt: "Consultant typing on a laptop",
+    caption: "Advisory client",
   },
   {
-    src: "/Service Images/delivery-apps-Lemonade.webp",
-    alt: "Iced lemonade with mint and lemon slices",
-    caption: "Café client",
+    src: "/Service Images/linkedin-desk.webp",
+    alt: "Laptop and notes on an office desk",
+    caption: "Founder-led business",
   },
 ];
 
 function LinkedInGallery() {
   return (
     <div className="mt-4">
-      {/* Without this line the three photos read as stray food on a LinkedIn
+      {/* Without this line the three photos read as stray office shots on a LinkedIn
           card. It says whose businesses they are, which is what makes the
           outreach figures above them mean something. */}
       <p className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-muted">
@@ -76,11 +76,11 @@ function LinkedInGallery() {
 }
 
 const AI_CONTENT_GALLERY: { src: string; alt: string }[] = [
-  { src: "/Service Images/ai-content-1.webp", alt: "Plated dish, styled for social content" },
-  { src: "/Service Images/ai-content-2.webp", alt: "Seafood dishes shot from above" },
-  { src: "/Service Images/ai-content-3.webp", alt: "Iced coffee on the counter" },
-  { src: "/Service Images/ai-content-4.webp", alt: "Cozy interior lounge space" },
-  { src: "/Service Images/ai-content-5.webp", alt: "Styled product close-up with drizzle" },
+  { src: "/Service Images/ai-content-notebook-flatlay.webp", alt: "Product flat lay, styled for social content" },
+  { src: "/Service Images/ai-content-team-meeting.webp", alt: "Your team at work in the office" },
+  { src: "/Service Images/ai-content-desk-flatlay.webp", alt: "Workspace shot from above" },
+  { src: "/Service Images/ai-content-standing-desk.webp", alt: "Workspace detail for the feed" },
+  { src: "/Service Images/ai-content-filming-phone.webp", alt: "Short video filmed on a phone" },
 ];
 
 function AiContentGallery() {
@@ -125,16 +125,16 @@ function ChannelDot({ color }: { color: string }) {
 
 const GOOGLE_GALLERY: { src: string; alt: string }[] = [
   {
-    src: "/Service Images/google-20260825-142103.webp",
-    alt: "Google Business Profile setup illustration",
+    src: "/Service Images/google-maps-phone.webp",
+    alt: "Google Maps open on a phone",
   },
   {
-    src: "/Service Images/google-20260825-142523.webp",
-    alt: "Google Maps visibility optimization graphic",
+    src: "/Service Images/google-search-phone.webp",
+    alt: "Google search open on a phone",
   },
   {
-    src: "/Service Images/google-show-up-when-someone-two-streets-away-searches-for-dinner-.webp",
-    alt: "Local business visibility when searched nearby",
+    src: "/Service Images/google-local-business-owner.webp",
+    alt: "Local business owner in their shop",
   },
 ];
 
@@ -325,7 +325,7 @@ function AiContentVisual() {
       <div className={`${card} overflow-hidden animate-float-a`}>
         <div className="relative aspect-[16/9] w-full">
           <Image
-            src="/Service Images/ai-content-feature.webp"
+            src="/Service Images/ai-content-feature-team.webp"
             alt=""
             fill
             sizes="(min-width: 1024px) 28rem, 100vw"
@@ -362,8 +362,8 @@ function FoundationsVisual() {
         </div>
         <div className="relative aspect-[16/10] w-full">
           <Image
-            src="/Service Images/foundations-20260825-160006.webp"
-            alt="Cozy modern interior with warm lighting and plants"
+            src="/Service Images/foundations-website-laptop.webp"
+            alt="Business website open on a laptop"
             fill
             sizes="(min-width: 1024px) 28rem, 100vw"
             className="object-cover"
@@ -371,7 +371,7 @@ function FoundationsVisual() {
         </div>
         <div className="p-4">
           <p className="text-center text-[0.65rem] leading-snug text-muted">
-            Inviting interior representing strong foundations
+            A proper website on your own domain
           </p>
           <p className="mt-3.5 text-sm font-semibold text-ink">Your Business Name</p>
           <p className="mt-0.5 text-[0.72rem] text-muted">
@@ -403,17 +403,17 @@ function LinkedInVisual() {
       name: "Connection requests sent",
       value: "42",
       tag: "This week",
-      image: "/Service Images/delivery-app-shawarma.webp",
+      image: "/Service Images/linkedin-office.webp",
     },
     {
       name: "Replies received",
       value: "11",
-      image: "/Service Images/delivery-apps-Grill Burger.webp",
+      image: "/Service Images/linkedin-laptop.webp",
     },
     {
       name: "Calls booked",
       value: "3",
-      image: "/Service Images/delivery-apps-Lemonade.webp",
+      image: "/Service Images/linkedin-desk.webp",
     },
   ];
   return (
