@@ -6,7 +6,6 @@
 
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
-import { PageHero } from "@/components/PageHero";
 import { Section } from "@/components/ui/Section";
 import { BlogCardFeatured, BlogCardSmall } from "@/components/BlogCard";
 import { CtaBand } from "@/components/CtaBand";
@@ -25,10 +24,9 @@ export default function BlogPage() {
 
   return (
     <main className="flex-1">
-      <PageHero
-        title="Blog"
-        intro="Ideas, playbooks and field notes, newest first."
-      />
+      {/* No visible page banner - the featured card leads the page. The heading
+          stays for screen readers and search engines. */}
+      <h1 className="sr-only">Blog</h1>
 
       <Section className="bg-white">
         {posts.length === 0 ? (

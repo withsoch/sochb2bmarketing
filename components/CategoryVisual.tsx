@@ -12,8 +12,8 @@ const REVIEWS_IMAGE = {
 };
 
 const REVIEWS_VARIATION_IMAGE = {
-  src: "/Service Images/reviews-five-stars.webp",
-  alt: "A row of five yellow stars",
+  src: "/Service Images/reviews-star-rating.webp",
+  alt: "A curved row of small glitter stars",
   caption: "Five-star reviews that keep coming in",
 };
 
@@ -403,17 +403,17 @@ function LinkedInVisual() {
       name: "Connection requests sent",
       value: "42",
       tag: "This week",
-      image: "/Service Images/linkedin-office.webp",
+      image: "/Service Images/linkedin-outreach-requests.webp",
     },
     {
       name: "Replies received",
       value: "11",
-      image: "/Service Images/linkedin-laptop.webp",
+      image: "/Service Images/linkedin-outreach-messages.webp",
     },
     {
       name: "Calls booked",
       value: "3",
-      image: "/Service Images/linkedin-desk.webp",
+      image: "/Service Images/linkedin-outreach-calls.webp",
     },
   ];
   return (

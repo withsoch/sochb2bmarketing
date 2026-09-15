@@ -79,8 +79,8 @@ export default function ServicesPage() {
             <Reveal delay={0.15} className="h-full">
               <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:h-full lg:min-h-[480px]">
                 <Image
-                  src="/Service Images/services-hero-collage.webp"
-                  alt="An analytics dashboard, social apps on a phone, brand cards and a team at their desks"
+                  src="/Service Images/services-hero-collage-v2.webp"
+                  alt="An analytics dashboard, social apps on a phone, a LinkedIn profile and Google Maps on a laptop"
                   fill
                   priority
                   sizes="(min-width: 1024px) 50vw, 100vw"
