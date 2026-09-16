@@ -18,7 +18,7 @@ Plenty of businesses post consistently and get nothing back, because every visit
 
 Someone sees one post. They tap your name. Now they are on your profile, and they are not browsing, they are checking.
 
-![A business owner standing outside their shop, on the phone, reading a note](/blog/instagram-marketing-for-b2b.webp)
+![Someone looking at a company profile on their phone at a desk](/blog/instagram-marketing-for-b2b-profile.webp)
 
 *A stranger decides here, in about ten seconds, whether you are worth messaging.*
 
