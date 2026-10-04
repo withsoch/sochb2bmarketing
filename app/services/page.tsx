@@ -4,25 +4,27 @@ import { BookButton } from "@/components/BookButton";
 import { AuditButton } from "@/components/AuditButton";
 import { CtaBand } from "@/components/CtaBand";
 import { InnerHero } from "@/components/InnerHero";
-import { HeroPhoto, FloatChip } from "@/components/HeroPhoto";
-import { PlatformMark } from "@/components/PlatformIcons";
+import { ServicesHeroVisual } from "@/components/ServicesHeroVisual";
 import { StatValue } from "@/components/StatCounter";
 import { Emphasis } from "@/components/ui/Emphasis";
 import { PLATFORMS } from "@/lib/channels";
-import { CTAS } from "@/lib/content";
+import { CTAS, SERVICE_CATEGORIES } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Services: Social, Google, Reviews & LinkedIn",
+  title: "Services: LinkedIn, Social Media, Google & AI Content",
   description:
-    "Instagram, TikTok and Facebook content, Google Business Profile management, review replies, AI-produced photos and video, one-page websites, LinkedIn outreach, and ad management, for B2B and growing businesses.",
+    "LinkedIn outreach, Instagram, Facebook, TikTok and YouTube content, Google Business Profile and review management, and AI-produced photos and video, for B2B and growing businesses.",
 };
 
 const FACT_TINTS = ["bg-peach", "bg-lilac-soft", "bg-sun-soft"];
 
+// Counted from the data, so these can't drift from the list below.
+const SERVICE_COUNT = SERVICE_CATEGORIES.reduce((n, c) => n + c.services.length, 0);
+
 const FACTS = [
-  { value: "24", label: "Services, across 7 categories" },
-  { value: "7", label: "Categories, run as one system" },
-  { value: "5", label: "Platforms & channels under one plan" },
+  { value: String(SERVICE_COUNT), label: `Services, across ${SERVICE_CATEGORIES.length} categories` },
+  { value: String(SERVICE_CATEGORIES.length), label: "Categories, run as one system" },
+  { value: String(PLATFORMS.length), label: "Platforms & channels under one plan" },
 ];
 
 export default function ServicesPage() {
@@ -40,7 +42,7 @@ export default function ServicesPage() {
           <>
             Every service below does one of two things: makes you easier to
             find, or makes people reach out once they&apos;ve found you.
-            Across Instagram, Google, LinkedIn, TikTok and Facebook.
+            Across LinkedIn, Instagram, Google, Facebook, TikTok and YouTube.
           </>
         }
         actions={
@@ -70,34 +72,7 @@ export default function ServicesPage() {
             ))}
           </dl>
         }
-        aside={
-          <HeroPhoto
-            src="/Service Images/services-hero-collage-v2.webp"
-            alt="An analytics dashboard, social apps on a phone, a LinkedIn profile and Google Maps on a laptop"
-          >
-            <FloatChip className="-left-2 top-3 hidden sm:block" float="animate-float-a">
-              <p className="text-[0.62rem] font-semibold uppercase tracking-[0.08em] text-muted">One plan, run across</p>
-              <div className="mt-2 flex gap-1.5">
-                {PLATFORMS.map((p) => (
-                  <PlatformMark key={p.id} id={p.id} size="sm" />
-                ))}
-              </div>
-            </FloatChip>
-            <FloatChip className="-left-1 bottom-1 sm:-left-6" float="animate-float-c">
-              <div className="flex items-center gap-2.5">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-leaf/15 text-leaf">
-                  <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden="true">
-                    <path d="M5 12.5l4.5 4.5L19 7.5" strokeLinecap="round" strokeLinejoin="round" />
-                  </svg>
-                </span>
-                <div>
-                  <p className="text-[0.75rem] font-semibold leading-tight text-ink">You approve every post</p>
-                  <p className="text-[0.68rem] leading-tight text-muted">Nothing goes live without you</p>
-                </div>
-              </div>
-            </FloatChip>
-          </HeroPhoto>
-        }
+        aside={<ServicesHeroVisual />}
       />
 
       <ServicesShowcase />

@@ -5,9 +5,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## What this is
 
 Marketing site for **Social Catalyst**, a social media marketing agency for B2B
-and growing businesses — Instagram, LinkedIn (company pages and outreach),
-Google Business Profile, review management, AI-produced images and video,
-one-page websites, and paid social ads. Pricing is quote-based: no package prices appear on the site. Live at
+and growing businesses — LinkedIn (company pages and outreach), Instagram,
+Facebook, TikTok and YouTube, Google Business Profile and reviews, and
+AI-produced images and video (one-page websites appear only inside packages).
+The agency does not run paid ads or send monthly reports, so no copy should
+promise either. Pricing is quote-based: no package prices appear on the site. Live at
 `www.withsocialcatalyst.com`. Next.js 16 (App Router) · React 19 · TypeScript ·
 Tailwind CSS v4 · Motion.
 
@@ -31,9 +33,10 @@ npx tsc --noEmit -p tsconfig.json   # type-check only, faster than a full build
 All three env vars are optional — set them in `.env.local` (there is no
 `.env.example`); each has a fallback:
 
-- `NEXT_PUBLIC_BOOKING_URL` — Cal.com/Calendly link every "Get a quote" button
-  opens (defaults to a Cal.com slug), centralized as `BOOKING_URL` in
-  `lib/content.ts`.
+- `NEXT_PUBLIC_BOOKING_URL` — the booking link behind every "Get a quote"
+  button (defaults to a Cal.com slug), centralized as `BOOKING_URL` in
+  `lib/content.ts`. A cal.com link opens as Cal's scheduling popup over the
+  page (`lib/cal.ts`); any other scheduler opens in a new tab.
 - `NEXT_PUBLIC_SCHEDULER_URL` — optional scheduler embed for `/book`; falls
   back to a styled contact card when unset (`SCHEDULER_URL` in `lib/content.ts`).
 - `NEXT_PUBLIC_AUDIT_WEBHOOK_URL` — webhook the "Free Marketing Audit" form
@@ -43,15 +46,19 @@ All three env vars are optional — set them in `.env.local` (there is no
 ## Architecture
 
 **`lib/content.ts` is the single source of truth for copy.** Hero text, nav,
-service categories, packages, pricing FAQs, process steps, stats, team,
+service categories, packages, pricing FAQs, stats, team,
 case studies, client logos, and the audit/confirmation page copy all live
 here as typed exports (`HERO`, `SITE`, `NAV`, `SERVICE_CATEGORIES`,
-`PACKAGES`, `STEPS`, `CASE_STUDIES`, `PROOF_TICKER`, `HOME_CTA`, etc.). Pages
+`PACKAGES`, `CASE_STUDIES`, `PROOF_TICKER`, `HOME_CTA`, etc.). Pages
 and components import from it rather than hardcoding copy, so a content
 change is almost always a `lib/content.ts` edit, not a JSX edit.
 `lib/channels.ts` similarly centralizes the platform list (Instagram/Google/
-LinkedIn/Facebook/TikTok) shared by the homepage channels band, the footer,
-and the dashboard mock (`components/SocialGrowthAnim.tsx`).
+LinkedIn/Facebook/TikTok/YouTube) shared by the homepage `WhatWeDo` band, the
+`/services` hero and the dashboard mock (`components/SocialGrowthAnim.tsx`);
+the channel counts shown on the site ("6 channels") come from its length.
+`SERVICE_CATEGORIES` holds the four categories in display order (LinkedIn &
+Lead Gen first, then Social Media, Google, AI Content); reviews are a service
+inside Google, kept reachable at `/services#reviews` via its `anchor`.
 
 **Case studies are the one exception to that rule.** The four pages under
 `app/case-studies/<slug>/page.tsx` (`gaia-antonescu`, `biola-babawale`,
@@ -95,16 +102,18 @@ hotlinked from the Webflow CDN (`cdn.prod.website-files.com`) — check they
 still resolve before relying on them.
 
 **Homepage structure** (`app/page.tsx`), top to bottom: `Hero` →
-`ProofTicker` → `Positioning` → `PlatformStrip` (the orange channels band,
-`#channels`) → `ServicesGrid` (photo bento; photos come from
-`SERVICE_CATEGORIES[].image`) → `ClientResults` (`#results`) → `HowWeWork` →
-`PackagesPreview` → FAQ (inline) → `HomeCta`. Rules when editing it:
+`ProofTicker` → `Positioning` → `WhatWeDo` (the orange "What we do" band,
+`#what-we-do`: channel chips + dashboard mock, then one card per service
+category, photos from `SERVICE_CATEGORIES[].image`) → `ClientResults`
+(`#results`) → `HomeCta` → FAQ (inline, always last). The homepage was cut
+back on purpose (no process steps, no packages preview: `/packages` has
+those), so add sections sparingly. Rules when editing it:
 - Full-bleed coloured sections are not wrapped in an outer `<Reveal>` —
   fading a whole band flashes white. Each section reveals its own content.
 - `HomeCta` is homepage-only; every other page ends with the shared `CtaBand`
   (same ink-and-aurora look; pass `audit={false}` where the free audit is
   already the page's main ask, as on `/audit`). `Stats` is used on About only.
-- `SocialGrowthAnim` lives in the channels band with `toast={false}`, because
+- `SocialGrowthAnim` lives in `WhatWeDo` with `toast={false}`, because
   the hero already shows its exported `NotificationToast`.
 - Stock photos are atmosphere only and are never captioned as clients; faces
   tied to results are always the real `CASE_STUDIES` photos.
@@ -113,7 +122,8 @@ still resolve before relying on them.
 is `InnerHero` (cream + `Aurora`, pulled up under the header, slots for
 `eyebrow`/`title`/`lead`/`actions`/`footer`/`aside`), usually with `HeroPhoto`
 + `FloatChip`s as the aside and `Emphasis` for the italic orange phrase in the
-title. `ui/Aurora` (`tone="cream" | "dark" | "brand"`) is the background glow for
+title. `/services` uses `ServicesHeroVisual` instead: three photos in curved,
+overlapping shapes, kept free of straight grid seams on purpose. `ui/Aurora` (`tone="cream" | "dark" | "brand"`) is the background glow for
 any full-bleed band; `ProofPill` is the client-faces link. Case-study detail
 pages don't use `InnerHero` (their heroes are bespoke) but share the cream +
 `Aurora` hero background and the tilted colour plate behind the portrait.
@@ -123,9 +133,12 @@ wraps the whole app in `app/layout.tsx`, so `useAuditModal()` (`context/AuditMod
 and `<AuditButton>` (`components/AuditButton.tsx`) work from any component
 without prop drilling — the modal itself (`components/AuditModal.tsx`) is
 rendered once at the layout root. `<BookButton>` (`components/BookButton.tsx`)
-is a plain link to `BOOKING_URL` and needs no provider. `components/BookAutoOpen.tsx`
-watches for `?book=true` / `?audit=true` query params (used by outbound links)
-and triggers the same two flows on page load.
+and `BookFooterLink` are links to `BOOKING_URL` whose click opens the Cal.com
+popup (`handleBookingClick` in `lib/cal.ts`) and need no provider; cmd/ctrl
+clicks, no-JS visits and a blocked embed script fall back to the plain link.
+`components/BookAutoOpen.tsx` preloads Cal's embed script when the page is
+idle, and watches for `?book=true` / `?audit=true` query params (used by
+outbound links) to trigger the same two flows on page load.
 
 **Design tokens live in `app/globals.css`** under a Tailwind v4 `@theme` block
 (`--color-brand`, `--color-ink`, `--color-mist`, `--color-sun`,

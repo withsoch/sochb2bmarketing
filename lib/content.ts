@@ -18,10 +18,13 @@ export const HERO = {
   /** Shown under the audit button. All three are promises the audit already makes. */
   microcopy: ["Free", "Read by a person", "Back within 24 hours"],
   proofLine: "Real results for founders in the UK, US, Europe & Pakistan",
-  /** Stock photo - atmosphere only, never captioned as a client. */
+  /**
+   * Atmosphere only, never captioned as a client. A real, unstaged photograph
+   * (LinkedIn Sales Solutions on Unsplash, photo B_DJO2-K22M, Unsplash License).
+   */
   photo: {
-    src: "/Service Images/ai-content-feature-team.webp",
-    alt: "A small team gathered round a laptop, smiling at what's on screen",
+    src: "/images/home-hero-office.jpg",
+    alt: "Two colleagues laughing together over a laptop in a bright office",
   },
 };
 
@@ -65,11 +68,17 @@ export const NAV = [
 ];
 
 // ------------------------------------------------------------------
-//  Services grouped into the 7 categories we sell. No prices here:
+//  Services grouped into the 4 categories we sell. No prices here:
 //  pricing only ever appears at the package level, on /packages.
+//  Order matters: it is the order on the homepage, /services and the footer.
 // ------------------------------------------------------------------
 
-export type Service = { title: string; description: string };
+export type Service = {
+  title: string;
+  description: string;
+  /** Optional id on /services, for deep links like /services#reviews. */
+  anchor?: string;
+};
 
 export type ServiceCategory = {
   slug: string;
@@ -81,12 +90,33 @@ export type ServiceCategory = {
   highlights: string[];
   /** Full list, with descriptions, shown on the /services page. */
   services: Service[];
-  /** Photo for the homepage bento card, rooted at public/. Omit for a colour tile. */
+  /** Photo for the homepage card, rooted at public/. */
   image?: string;
   imageAlt?: string;
 };
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [
+  {
+    slug: "linkedin-leadgen",
+    image: "/Service Images/linkedin-laptop.webp",
+    imageAlt: "Typing an outreach message on a laptop",
+    icon: "target",
+    name: "LinkedIn & Lead Gen",
+    blurb: "LinkedIn outreach that actually starts conversations.",
+    highlights: ["Full profile & company page rebuild", "Ongoing outreach, every reply followed up"],
+    services: [
+      {
+        title: "LinkedIn Profile & Outreach Build",
+        description:
+          "Founder and company page rebuilt properly, plus a connection and messaging sequence written for your actual buyers. Not a template with your name swapped in.",
+      },
+      {
+        title: "Outreach Campaign Management",
+        description:
+          "Weekly connection requests, follow-ups and replies, handled for you. Your pipeline stops depending on referrals alone.",
+      },
+    ],
+  },
   {
     slug: "social-media",
     image: "/Service Images/social-media-phone.webp",
@@ -100,39 +130,29 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     ],
     services: [
       {
-        title: "Instagram Essentials",
+        title: "Instagram",
         description:
-          "Eight posts a month, written, designed and scheduled. Your page stops looking like a business that might have shut down.",
+          "Posts, stories and short videos, written, designed and scheduled for you, with comments and DMs answered on weekdays. You approve the month in about 20 minutes.",
       },
       {
-        title: "Instagram Standard",
+        title: "LinkedIn",
         description:
-          "12 posts, 12 stories and 2 short videos a month. You see the whole month on one calendar and approve it in about 20 minutes.",
+          "Regular posts on your company page, aimed at the people who actually buy. That is where inbound calls and warm introductions come from.",
       },
       {
-        title: "Instagram Plus",
+        title: "Facebook",
         description:
-          "20 posts, daily stories and 4 short videos a month. People who follow you see you most days, which is when they start reaching out.",
+          "Your Instagram content mirrored to Facebook, with your page details and hours kept right.",
       },
       {
-        title: "TikTok Channel",
+        title: "TikTok",
         description:
-          "Eight videos a month, cut the way the app rewards, using formats already working in your space. Reaches people who have never heard of you.",
+          "Short videos cut the way the app rewards. Reaches people who have never heard of you.",
       },
       {
-        title: "Facebook Page",
+        title: "YouTube",
         description:
-          "Your Instagram content mirrored to Facebook, with your page details and hours kept right. Catches the part of your audience that still lives there.",
-      },
-      {
-        title: "LinkedIn Presence",
-        description:
-          "Eight posts a month on your company page, aimed at the people who actually buy. That is where inbound calls and warm introductions come from.",
-      },
-      {
-        title: "Inbox & Comments",
-        description:
-          "We answer your DMs and comments Monday to Friday, usually within a few hours. Nobody asking a question gets left on read.",
+          "Shorts cut from the videos you already make, plus thumbnails and channel branding.",
       },
     ],
   },
@@ -145,7 +165,7 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
     blurb: "Show up when someone nearby searches for what you do.",
     highlights: [
       "Profile claimed, verified and fully built out",
-      "Every review answered within 24 hours",
+      "Reviews asked for, and every one answered within 24 hours",
     ],
     services: [
       {
@@ -159,30 +179,16 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
           "A Google post every week, fresh photos monthly, hours and details always right. Google ranks active listings above dormant ones.",
       },
       {
-        title: "Review Replies",
-        description:
-          "Every review answered inside 24 hours. Difficult ones handled calmly, and we check with you before replying to those.",
-      },
-      {
         title: "Google Maps Visibility",
         description:
           "A one-off deep pass on categories, service area, photos and the words in each field. Moves you up the map for searches near you.",
       },
-    ],
-  },
-  {
-    slug: "reviews",
-    image: "/Service Images/reviews-customer-rating.webp",
-    imageAlt: "A phone with a five-star customer review above it",
-    icon: "star",
-    name: "Reviews",
-    blurb: "Get the reviews you are owed, without anyone feeling awkward.",
-    highlights: ["Follow-up emails, a client-facing ask and a team script"],
-    services: [
       {
-        title: "Review Generation System",
+        title: "Reviews",
+        // Reviews used to be its own category; blog posts still link to #reviews.
+        anchor: "reviews",
         description:
-          "A follow-up email after every project, a simple ask and a short script for your team. Your rating stops being decided by the two clients who complained.",
+          "A follow-up email and a short script for your team, so happy clients actually leave a review. Every review answered inside 24 hours, and we check with you before replying to a difficult one.",
       },
     ],
   },
@@ -209,77 +215,6 @@ export const SERVICE_CATEGORIES: ServiceCategory[] = [
         title: "Seasonal Campaign Pack",
         description:
           "12 images and 2 videos on one theme for a launch, a campaign or a new offer. Ready the week before you need them, not the week after.",
-      },
-    ],
-  },
-  {
-    slug: "foundations",
-    image: "/Service Images/foundations-website-laptop.webp",
-    imageAlt: "A one-page website open on a laptop",
-    icon: "globe",
-    name: "Foundations",
-    blurb: "The profile, brand and website you never got round to.",
-    highlights: ["Instagram profile rebuilt properly", "A one-page website on your own domain"],
-    services: [
-      {
-        title: "Instagram Profile Build",
-        description:
-          "Bio, highlights, buttons and pinned posts rebuilt from scratch. Someone landing on your page can see what you do and get in touch in two taps.",
-      },
-      {
-        title: "Brand Basics Kit",
-        description:
-          "Your colours, your fonts and a set of reusable post templates. Everything you publish afterwards looks like the same business.",
-      },
-      {
-        title: "One-Page Website",
-        description:
-          "One fast page on your own domain: services, photos, contact details, location. Somewhere to send people that is not a social profile.",
-      },
-      {
-        title: "Website Updates",
-        description:
-          "Changed your services or your details? We update the page, up to two changes a month. Hosting, security and domain renewal are in the price.",
-      },
-    ],
-  },
-  {
-    slug: "linkedin-leadgen",
-    image: "/Service Images/linkedin-laptop.webp",
-    imageAlt: "Typing an outreach message on a laptop",
-    icon: "target",
-    name: "LinkedIn & Lead Gen",
-    blurb: "LinkedIn outreach that actually starts conversations.",
-    highlights: ["Full profile & company page rebuild", "Ongoing outreach, tracked and reported"],
-    services: [
-      {
-        title: "LinkedIn Profile & Outreach Build",
-        description:
-          "Founder and company page rebuilt properly, plus a connection and messaging sequence written for your actual buyers. Not a template with your name swapped in.",
-      },
-      {
-        title: "Outreach Campaign Management",
-        description:
-          "Weekly connection requests, follow-ups and replies tracked every month. Your pipeline stops depending on referrals alone.",
-      },
-    ],
-  },
-  {
-    slug: "growth",
-    icon: "trend",
-    name: "Ads & Reporting",
-    blurb: "Paid reach, and a report you can read in two minutes.",
-    highlights: ["Instagram, Facebook & LinkedIn ads management", "A one-page report, in plain language"],
-    services: [
-      {
-        title: "Paid Social Ads",
-        description:
-          "Setup, targeting and weekly changes across Meta and LinkedIn, based on what is actually converting. You pay the platform directly for the budget, so you see what it really costs.",
-      },
-      {
-        title: "Monthly Report",
-        description:
-          "One page, plain words: who saw you, who opened your profile, and how many people asked to get in touch.",
       },
     ],
   },
@@ -341,7 +276,6 @@ export const PACKAGES: Package[] = [
       "12 Instagram posts, 12 stories, 2 short videos a month",
       "10 custom images a month",
       "Every Google review answered within 24 hours",
-      "Monthly plain-language performance report",
     ],
   },
   {
@@ -356,7 +290,6 @@ export const PACKAGES: Package[] = [
       "25 custom images a month",
       "Review system: follow-up emails, client-facing ask, team script",
       "Google Business Profile setup and management",
-      "Monthly plain-language performance report",
     ],
   },
   {
@@ -368,8 +301,6 @@ export const PACKAGES: Package[] = [
     features: [
       "Everything above: Instagram (top tier), TikTok, brand kit, website, the full Google suite, LinkedIn outreach, review system",
       "25 custom images and 2 short videos a month",
-      "Paid Instagram, Facebook and LinkedIn ads management",
-      "Monthly plain-language performance report",
     ],
   },
 ];
@@ -384,7 +315,6 @@ export const PACKAGE_FINE_PRINT = [
   "Minimum term: 6 months, then month to month with 30 days' notice.",
   "You approve every post before it goes live. Nothing is published without your sign-off.",
   "Website: one page, two rounds of changes, domain registered in your name.",
-  "Ad budget, where it applies, is paid by you directly to Meta and is not in the package price.",
 ];
 
 export type FaqItem = { q: string; a: string };
@@ -403,59 +333,13 @@ export const PRICING_FAQS: FaqItem[] = [
     a: "Yes. Most businesses start on Essentials or Starter and move up once the basics are working. Tell us what changed and we'll requote the difference.",
   },
   {
-    q: "Is the ad budget included in the Full package price?",
-    a: "No. The Full package fee covers running your ads: setup, targeting, weekly changes. Whatever you spend on the ads themselves goes from you straight to the platform, on top of that.",
-  },
-  {
     q: "Which package is right for my business?",
     a: "If most of your new clients already come from outreach and referrals, start with Outbound-Led. If you're barely online yet, start with Essentials or Starter. If you're not sure, get a quote. We'll ask a few questions about your business and name one honestly, even if it's the cheapest one.",
   },
 ];
 
-// ------------------------------------------------------------------
-//  How we work
-// ------------------------------------------------------------------
-
-export type Step = {
-  no: string;
-  icon: IconName;
-  title: string;
-  description: string;
-};
-
-export const STEPS: Step[] = [
-  {
-    no: "01",
-    icon: "audit",
-    title: "Audit & Quick Wins",
-    description:
-      "We read your Instagram, your Google listing and your LinkedIn by hand, then fix the free things first, the ones that change how you show up this week.",
-  },
-  {
-    no: "02",
-    icon: "pin",
-    title: "Get Found on Google",
-    description:
-      "We claim, verify and fill out your Google Business Profile, so the person searching for what you do actually sees you.",
-  },
-  {
-    no: "03",
-    icon: "image",
-    title: "Look Active, Every Week",
-    description:
-      "Photos, posts, stories and review replies on a fixed schedule, written for your business.",
-  },
-  {
-    no: "04",
-    icon: "trend",
-    title: "Turn Views Into Leads",
-    description:
-      "LinkedIn outreach running, reviews coming in steadily, and a one-page report showing profile visits and inquiries.",
-  },
-];
-
 export const STATS = [
-  { value: "5", label: "Platforms & channels run under one plan" },
+  { value: "6", label: "Platforms & channels run under one plan" },
   { value: "24h", label: "Every Google review answered within" },
   { value: "10+", label: "Custom images delivered, every month" },
   { value: "100%", label: "Posts approved by you before going live" },
@@ -722,7 +606,7 @@ export const PROOF_TICKER: string[] = [
   }),
   "Every Google review answered within 24h",
   "You approve 100% of posts",
-  "5 channels, one plan",
+  "6 channels, one plan",
 ];
 
 // NOTE: Placeholder client roster, invented names, rendered as text wordmarks
@@ -858,7 +742,7 @@ export const CONFIRMATION_FAQS: FaqItem[] = [
 export const FAQS: FaqItem[] = [
   {
     q: "I paid an agency before and got a monthly PDF for it.",
-    a: "That's a fair thing to hold against us. Two differences you can check for yourself: you approve every post before it goes live, so you see the work as it happens instead of reading a summary a month later. And the report is one page that says how many people asked Google for your contact details. If the work stops, you'll notice in week one, not in month six.",
+    a: "That's a fair thing to hold against us. The difference you can check for yourself: you approve every post before it goes live, so you see the work as it happens instead of reading a summary a month later. If the work stops, you'll notice in week one, not in month six.",
   },
   {
     q: "How long before I see anything?",
@@ -869,8 +753,8 @@ export const FAQS: FaqItem[] = [
     a: "Then after six months you still own a rebuilt Google profile, a claimed listing, a stack of new reviews and a few hundred posts. That's the floor. The honest part: we can make you easy to find and worth choosing. We can't fix an offer that doesn't hold up once someone's tried it, and we'll tell you on the call if we think that's the real problem.",
   },
   {
-    q: "Do I have to be on TikTok, or run ads?",
-    a: "No to both. TikTok sits on two of the five packages and plenty of businesses skip it. Paid ads only sit on the Full package, and the budget goes from you straight to the platform so you see the real cost. For most B2B businesses, LinkedIn, Google and a steady content calendar do more than either.",
+    q: "Do I have to be on TikTok?",
+    a: "No. TikTok sits on two of the five packages and plenty of businesses skip it. For most B2B businesses, LinkedIn, Google and a steady content calendar do more.",
   },
   {
     q: "How much of my week does this take?",

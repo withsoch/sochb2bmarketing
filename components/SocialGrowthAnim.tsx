@@ -8,7 +8,7 @@ import { type Channel } from "@/lib/channels";
 // ------------------------------------------------------------------
 //  Homepage channels visual: a "business control deck" mock. Deliberately not a clone of
 //  any one platform's UI - it shows the thing we actually sell, which is
-//  every channel planned, published and measured in one place.
+//  every channel planned and published in one place.
 //
 //  Layout rule for this file: nothing floats on top of readable content.
 //  The notification toast lives in the gutter above the card and the
@@ -28,6 +28,7 @@ const SCHEDULE: Post[] = [
   { channel: "facebook", label: "Facebook · client spotlight", when: "Wed" },
   { channel: "tiktok", label: "Quick tip video", when: "Thu" },
   { channel: "linkedin", label: "Connection · outreach message", when: "Fri" },
+  { channel: "youtube", label: "YouTube Short · client story", when: "Sat" },
 ];
 
 const METRICS: { label: string; target: number }[] = [
@@ -179,7 +180,7 @@ export function SocialGrowthAnim({ toast = true }: { toast?: boolean }) {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-leaf opacity-70 motion-reduce:animate-none" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-leaf" />
             </span>
-            5 channels live
+            6 channels live
           </span>
         </div>
 

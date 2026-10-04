@@ -16,7 +16,7 @@ import { CTAS, PACKAGES, PACKAGE_TERMS, PRICING_FAQS } from "@/lib/content";
 export const metadata: Metadata = {
   title: "Packages & Pricing for B2B and Growing Businesses",
   description:
-    "Five packages for B2B and growing businesses. Social media, Google, reviews, LinkedIn outreach and ads. Get a quote.",
+    "Five packages for B2B and growing businesses. LinkedIn outreach, social media, Google and reviews. Get a quote.",
 };
 
 const CORE = PACKAGES.filter((p) => p.track === "core");
