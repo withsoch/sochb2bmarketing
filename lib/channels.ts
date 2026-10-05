@@ -1,7 +1,7 @@
 // ------------------------------------------------------------------
 //  Social Catalyst - the channels we actually run for B2B and growing businesses.
-//  One list, shared by the homepage platform strip, the footer column
-//  and the hero animation, so the platforms we name never drift apart.
+//  One list, shared by the homepage "What we do" band, the /services hero
+//  and the dashboard mock, so the platforms we name never drift apart.
 // ------------------------------------------------------------------
 
 export type Channel =
@@ -9,7 +9,8 @@ export type Channel =
   | "facebook"
   | "tiktok"
   | "google"
-  | "linkedin";
+  | "linkedin"
+  | "youtube";
 
 /** Brand colours, defined as tokens in globals.css. Badges and glyphs only. */
 export const CHANNEL_VAR: Record<Channel, string> = {
@@ -18,13 +19,14 @@ export const CHANNEL_VAR: Record<Channel, string> = {
   tiktok: "var(--color-channel-tiktok)",
   google: "var(--color-channel-google)",
   linkedin: "var(--color-channel-linkedin)",
+  youtube: "var(--color-channel-youtube)",
 };
 
 /**
  * Ordered for display. LinkedIn, Google and Instagram are where nearly
- * every B2B business needs to show up; Facebook and TikTok are marked
- * non-primary because not every business needs them - but they still get
- * a full-strength mark, since a faded logo reads as "broken", not "optional".
+ * every B2B business needs to show up; Facebook, TikTok and YouTube are
+ * marked non-primary because not every business needs them - but they still
+ * get a full-strength mark, since a faded logo reads as "broken", not "optional".
  *
  * `mark` picks how the logo is drawn (see components/PlatformIcons.tsx):
  * a real brand glyph, traced or extracted from each platform's own
@@ -69,6 +71,13 @@ export const PLATFORMS: {
     id: "tiktok",
     name: "TikTok",
     role: "Short‑form video",
+    primary: false,
+    mark: "glyph",
+  },
+  {
+    id: "youtube",
+    name: "YouTube",
+    role: "Shorts & thumbnails",
     primary: false,
     mark: "glyph",
   },

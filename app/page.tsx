@@ -1,11 +1,8 @@
 import { Hero } from "@/components/Hero";
 import { ProofTicker } from "@/components/ProofTicker";
-import { PlatformStrip } from "@/components/PlatformStrip";
 import { Positioning } from "@/components/Positioning";
-import { ServicesGrid } from "@/components/ServicesGrid";
+import { WhatWeDo } from "@/components/WhatWeDo";
 import { ClientResults } from "@/components/ClientResults";
-import { PackagesPreview } from "@/components/PackagesPreview";
-import { HowWeWork } from "@/components/HowWeWork";
 import { Faq } from "@/components/Faq";
 import { HomeCta } from "@/components/HomeCta";
 import { BookButton } from "@/components/BookButton";
@@ -21,11 +18,10 @@ export default function Home() {
       <Hero />
       <ProofTicker />
       <Positioning />
-      <PlatformStrip />
-      <ServicesGrid />
+      <WhatWeDo />
       <ClientResults />
-      <HowWeWork />
-      <PackagesPreview />
+      <HomeCta />
+      {/* Common questions close the page, after the audit ask. */}
       <section className="bg-white py-20 sm:py-24 lg:py-28">
         <div className="container-x grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
           <Reveal className="lg:sticky lg:top-28 lg:self-start">
@@ -45,7 +41,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-      <HomeCta />
     </>
   );
 }

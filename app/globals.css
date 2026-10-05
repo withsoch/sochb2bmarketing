@@ -51,6 +51,7 @@
   --color-channel-tiktok: #1a1a1a;
   --color-channel-google: #4285f4;
   --color-channel-linkedin: #0a66c2;
+  --color-channel-youtube: #ff0000;
 
   /* Fonts */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;

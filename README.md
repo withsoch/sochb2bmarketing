@@ -26,8 +26,9 @@ npm run lint     # ESLint
 
 Copy `.env.example` to `.env.local` and fill in the real values before launch:
 
-- `NEXT_PUBLIC_BOOKING_URL` - Cal.com/Calendly link used by every "Get a quote"
-  button (defaults to a placeholder Cal.com slug).
+- `NEXT_PUBLIC_BOOKING_URL` - booking link used by every "Get a quote" button
+  (defaults to a Cal.com slug). Cal.com links open as a popup over the page;
+  any other scheduler opens in a new tab.
 - `NEXT_PUBLIC_SCHEDULER_URL` - optional live scheduler embed for `/book` (falls back
   to a styled contact card when unset).
 - `NEXT_PUBLIC_AUDIT_WEBHOOK_URL` - webhook the "Free Venue Audit" form posts to

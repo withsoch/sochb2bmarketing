@@ -168,7 +168,7 @@ export function ServicesShowcase() {
 
                       <ul className="mt-6 space-y-4 border-t border-line pt-5">
                         {c.services.map((s) => (
-                          <li key={s.title}>
+                          <li key={s.title} id={s.anchor} className={s.anchor ? "scroll-mt-32" : undefined}>
                             <p className="flex items-start gap-2.5 text-[0.95rem] font-semibold text-ink">
                               <Icon
                                 name="check"

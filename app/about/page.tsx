@@ -38,7 +38,7 @@ const VALUES: { icon: IconName; title: string; body: string }[] = [
   {
     icon: "target",
     title: "Leads, not vanity",
-    body: "Follower counts show up in every report because they're useful context. They are not the goal. The goal is a booked call, a qualified lead, or someone reaching out because your listing came up first.",
+    body: "Follower counts are useful context. They are not the goal. The goal is a booked call, a qualified lead, or someone reaching out because your listing came up first.",
   },
   {
     icon: "spark",

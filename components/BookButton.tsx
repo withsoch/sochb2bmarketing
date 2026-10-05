@@ -1,5 +1,8 @@
+"use client";
+
 import { Icon } from "@/components/Icons";
 import { BOOKING_URL } from "@/lib/content";
+import { handleBookingClick } from "@/lib/cal";
 
 type Variant = "primary" | "secondary" | "dark" | "light";
 type Size = "md" | "lg";
@@ -37,6 +40,7 @@ export function BookButton({
       href={BOOKING_URL}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={handleBookingClick}
       className={cls}
     >
       {children}

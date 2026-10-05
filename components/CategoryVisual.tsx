@@ -5,18 +5,6 @@
 import Image from "next/image";
 import { Icon } from "@/components/Icons";
 
-const REVIEWS_IMAGE = {
-  src: "/Service Images/reviews-phone-typing.webp",
-  alt: "Client typing a review on their phone",
-  caption: "A simple ask after every project",
-};
-
-const REVIEWS_VARIATION_IMAGE = {
-  src: "/Service Images/reviews-customer-rating.webp",
-  alt: "A phone with a five-star customer review above it",
-  caption: "Five-star reviews that keep coming in",
-};
-
 const SOCIAL_MEDIA_IMAGE = {
   src: "/Service Images/social-media-phone.webp",
   alt: "Checking a business's social feed on a phone",
@@ -164,9 +152,10 @@ function GoogleGallery() {
 function SocialMediaVisual() {
   const rows: { channel: string; label: string; day: string }[] = [
     { channel: "var(--color-channel-instagram)", label: "Reel · behind the scenes", day: "Mon" },
-    { channel: "var(--color-channel-instagram)", label: "Story · team spotlight", day: "Wed" },
-    { channel: "var(--color-channel-facebook)", label: "Client testimonial post", day: "Fri" },
-    { channel: "var(--color-channel-tiktok)", label: "TikTok · quick tip video", day: "Sat" },
+    { channel: "var(--color-channel-linkedin)", label: "LinkedIn · client win", day: "Tue" },
+    { channel: "var(--color-channel-facebook)", label: "Client testimonial post", day: "Wed" },
+    { channel: "var(--color-channel-tiktok)", label: "TikTok · quick tip video", day: "Thu" },
+    { channel: "var(--color-channel-youtube)", label: "YouTube Short · how we work", day: "Fri" },
   ];
   return (
     <Stage>
@@ -237,83 +226,32 @@ function GoogleVisual() {
 
         <GoogleGallery />
 
-        <div className="mt-3.5 flex items-center justify-between border-t border-dashed border-line pt-3 text-[0.7rem] text-slate">
-          <span>Hours updated for the holiday</span>
-          <span className="font-semibold text-ink">Today</span>
+        <div className="mt-4 border-t border-dashed border-line pt-3.5">
+          <div className="flex items-center justify-between">
+            <p className="text-[0.75rem] font-semibold text-ink">New review</p>
+            <span className="flex items-center gap-0.5 text-brand">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <Icon key={i} name="star" className="h-3 w-3" strokeWidth={0} />
+              ))}
+            </span>
+          </div>
+          <p className="mt-1.5 text-[0.75rem] leading-relaxed text-ink-soft">
+            &ldquo;Responsive team, and they remembered exactly what we needed
+            from our last call.&rdquo;
+          </p>
+          <div className="mt-2.5 rounded-lg border border-line bg-cream px-3 py-2">
+            <p className="text-[0.62rem] font-semibold uppercase tracking-[0.08em] text-muted">
+              Your reply · 3h later
+            </p>
+            <p className="mt-1 text-[0.72rem] leading-relaxed text-slate">
+              Thank you, that means a lot. See you on the next one.
+            </p>
+          </div>
         </div>
       </div>
       <div className={`${chip} -bottom-2 -left-2 flex w-auto items-center gap-2 animate-float-c`}>
         <Icon name="clock" className="h-4 w-4 text-brand" strokeWidth={1.8} />
         <p className="text-[0.68rem] font-semibold text-ink">Reviews answered in 24h</p>
-      </div>
-    </Stage>
-  );
-}
-
-function ReviewsVisual() {
-  return (
-    <Stage>
-      <div className={`${card} p-5 animate-float-a`}>
-        <div className="flex items-center justify-between">
-          <p className="text-sm font-semibold text-ink">New Google review</p>
-          <span className="flex items-center gap-0.5 text-brand">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <Icon key={i} name="star" className="h-3.5 w-3.5" strokeWidth={0} />
-            ))}
-          </span>
-        </div>
-        <p className="mt-3 text-[0.8rem] leading-relaxed text-ink-soft">
-          &ldquo;Responsive team, and they remembered exactly what we needed
-          from our last call.&rdquo;
-        </p>
-        <div className="mt-3.5 rounded-lg border border-line bg-cream p-3">
-          <p className="text-[0.68rem] font-semibold uppercase tracking-[0.08em] text-muted">
-            Owner response
-          </p>
-          <p className="mt-1.5 text-[0.75rem] leading-relaxed text-slate">
-            Thank you so much, really appreciate you taking the time to write this!
-          </p>
-        </div>
-
-        <p className="mt-3.5 flex items-center gap-2 border-t border-dashed border-line pt-3.5 text-[0.8rem] font-semibold text-ink">
-          <Icon name="clock" className="h-4 w-4 text-brand" strokeWidth={1.8} />
-          Every review answered inside 24 hours
-        </p>
-
-        <div className="mt-3.5 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <figure>
-            <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-line">
-              <Image
-                src={REVIEWS_IMAGE.src}
-                alt={REVIEWS_IMAGE.alt}
-                fill
-                sizes="(min-width: 640px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <figcaption className="mt-1.5 text-center text-[0.65rem] leading-snug text-muted">
-              {REVIEWS_IMAGE.caption}
-            </figcaption>
-          </figure>
-          <figure>
-            <div className="relative aspect-square overflow-hidden rounded-lg ring-1 ring-line">
-              <Image
-                src={REVIEWS_VARIATION_IMAGE.src}
-                alt={REVIEWS_VARIATION_IMAGE.alt}
-                fill
-                sizes="(min-width: 640px) 50vw, 100vw"
-                className="object-cover"
-              />
-            </div>
-            <figcaption className="mt-1.5 text-center text-[0.65rem] leading-snug text-muted">
-              {REVIEWS_VARIATION_IMAGE.caption}
-            </figcaption>
-          </figure>
-        </div>
-      </div>
-      <div className={`${chip} -right-2 -top-3 flex w-auto items-center gap-2 animate-float-b`}>
-        <span className="h-2 w-2 rounded-full bg-leaf" />
-        <p className="text-[0.68rem] font-semibold text-ink">Replied in 3h</p>
       </div>
     </Stage>
   );
@@ -345,53 +283,6 @@ function AiContentVisual() {
       <div className={`${chip} -bottom-2 -left-2 flex w-auto items-center gap-2 animate-float-b`}>
         <Icon name="spark" className="h-4 w-4 text-brand" strokeWidth={1.6} />
         <p className="text-[0.68rem] font-semibold text-ink">No photographer needed</p>
-      </div>
-    </Stage>
-  );
-}
-
-function FoundationsVisual() {
-  return (
-    <Stage>
-      <div className={`${card} overflow-hidden animate-float-a`}>
-        <div className="flex items-center gap-1.5 border-b border-line bg-mist/60 px-3 py-2">
-          <span className="h-2 w-2 rounded-full bg-line" />
-          <span className="h-2 w-2 rounded-full bg-line" />
-          <span className="h-2 w-2 rounded-full bg-line" />
-          <span className="ml-2 truncate text-[0.65rem] text-muted">yourbusiness.com</span>
-        </div>
-        <div className="relative aspect-[16/10] w-full">
-          <Image
-            src="/Service Images/foundations-website-laptop.webp"
-            alt="Business website open on a laptop"
-            fill
-            sizes="(min-width: 1024px) 28rem, 100vw"
-            className="object-cover"
-          />
-        </div>
-        <div className="p-4">
-          <p className="text-center text-[0.65rem] leading-snug text-muted">
-            A proper website on your own domain
-          </p>
-          <p className="mt-3.5 text-sm font-semibold text-ink">Your Business Name</p>
-          <p className="mt-0.5 text-[0.72rem] text-muted">
-            Trusted by clients since 2019
-          </p>
-          <div className="mt-3.5 flex gap-2">
-            <span className="rounded-md bg-brand px-2.5 py-1 text-[0.62rem] font-semibold text-white">
-              View services
-            </span>
-            <span className="rounded-md border border-line px-2.5 py-1 text-[0.62rem] font-semibold text-ink-soft">
-              Contact us
-            </span>
-          </div>
-        </div>
-      </div>
-      <div className={`${chip} -right-2 -top-3 flex w-auto items-center gap-2 animate-float-c`}>
-        <span className="h-3.5 w-3.5 rounded-full bg-brand" />
-        <span className="h-3.5 w-3.5 rounded-full bg-forest" />
-        <span className="h-3.5 w-3.5 rounded-full bg-leaf" />
-        <p className="text-[0.65rem] font-semibold text-ink">Brand kit</p>
       </div>
     </Stage>
   );
@@ -456,51 +347,11 @@ function LinkedInVisual() {
   );
 }
 
-function GrowthVisual() {
-  const bars = [30, 46, 38, 58, 72, 64, 88];
-  return (
-    <Stage>
-      <div className={`${card} p-5 animate-float-a`}>
-        <div className="flex items-center justify-between">
-          <p className="text-sm font-semibold text-ink">Monthly report</p>
-          <span className="text-[0.7rem] font-semibold text-leaf">Reach ↑ 34%</span>
-        </div>
-        <div className="mt-4 flex h-20 items-end gap-1.5">
-          {bars.map((h, i) => (
-            <div
-              key={i}
-              className="flex-1 rounded-t"
-              style={{ height: `${h}%`, background: i === bars.length - 1 ? "var(--color-brand)" : "var(--color-line)" }}
-            />
-          ))}
-        </div>
-        <div className="mt-3.5 grid grid-cols-2 gap-3 border-t border-dashed border-line pt-3.5">
-          <div>
-            <p className="text-[0.68rem] text-muted">Contact requests</p>
-            <p className="text-[1.1rem] leading-none text-ink" style={{ fontFamily: "var(--font-display)" }}>146</p>
-          </div>
-          <div>
-            <p className="text-[0.68rem] text-muted">Ad spend managed</p>
-            <p className="text-[1.1rem] leading-none text-ink" style={{ fontFamily: "var(--font-display)" }}>€480</p>
-          </div>
-        </div>
-      </div>
-      <div className={`${chip} -right-2 -top-3 flex w-auto items-center gap-2 animate-float-c`}>
-        <Icon name="chat" className="h-4 w-4 text-brand" strokeWidth={1.7} />
-        <p className="text-[0.65rem] font-semibold text-ink">Plain-language, one page</p>
-      </div>
-    </Stage>
-  );
-}
-
 const VISUALS: Record<string, () => React.JSX.Element> = {
+  "linkedin-leadgen": LinkedInVisual,
   "social-media": SocialMediaVisual,
   google: GoogleVisual,
-  reviews: ReviewsVisual,
   "ai-content": AiContentVisual,
-  foundations: FoundationsVisual,
-  "linkedin-leadgen": LinkedInVisual,
-  growth: GrowthVisual,
 };
 
 export function CategoryVisual({ slug }: { slug: string }) {

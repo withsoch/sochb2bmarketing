@@ -208,7 +208,7 @@ export function HeroVisual() {
             priority
             sizes="(min-width: 1024px) 26rem, (min-width: 640px) 26rem, 90vw"
             className="aspect-[4/3] rounded-[2rem] shadow-[var(--shadow-lift)] ring-4 ring-white sm:aspect-[4/5]"
-            imgClassName="object-[60%_center]"
+            imgClassName="object-[50%_30%]"
           />
         </motion.div>
 

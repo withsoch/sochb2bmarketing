@@ -155,7 +155,7 @@ export function Positioning() {
 
         <Reveal className="mt-10 flex justify-center">
           <a
-            href="#channels"
+            href="#what-we-do"
             className="group inline-flex items-center gap-2 rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-ink-soft"
           >
             Here&apos;s what we do about it
