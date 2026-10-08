@@ -53,21 +53,21 @@ const GALLERY = {
   ratio: "3/4",
   columns: 3 as const,
   images: [
-    { src: `${IMG}/why-automations-fail.jpg`, alt: "Post: Why 80% of automations fail" },
-    { src: `${IMG}/80-20-rule.jpg`, alt: "Post: The 80/20 rule of automation" },
-    { src: `${IMG}/automation-roi.jpg`, alt: "Post: Stop guessing your automation ROI" },
-    { src: `${IMG}/stop-typing-prompts.jpg`, alt: "Post: Stop typing prompts, start building background systems" },
+    { src: `${IMG}/why-automations-fail-hd.jpg`, alt: "Post: Why 80% of automations fail" },
+    { src: `${IMG}/80-20-rule-hd.jpg`, alt: "Post: The 80/20 rule of automation" },
+    { src: `${IMG}/automation-roi-hd.png`, alt: "Post: Stop guessing your automation ROI" },
+    { src: `${IMG}/stop-typing-prompts-hd.png`, alt: "Post: Stop typing prompts, start building background systems" },
     { src: `${IMG}/audit-before-you-automate.jpg`, alt: "Post: Audit before you automate" },
-    { src: `${IMG}/automations-that-dont-break.jpg`, alt: "Carousel cover: How to build automations that don't break" },
-    { src: `${IMG}/build-systems.jpg`, alt: "Reel cover: Build systems that run without you" },
-    { src: `${IMG}/stop-email-blasts.jpg`, alt: "Post: Stop sending email blasts" },
-    { src: `${IMG}/team-wasting-time.jpg`, alt: "Post: Your team is wasting time on admin" },
+    { src: `${IMG}/automations-that-dont-break-hd.png`, alt: "Carousel cover: How to build automations that don't break" },
+    { src: `${IMG}/build-systems.png`, alt: "Reel cover: Build systems that run without you" },
+    { src: `${IMG}/stop-email-blasts-hd.png`, alt: "Post: Stop sending email blasts" },
+    { src: `${IMG}/team-wasting-time-hd.png`, alt: "Post: Your team is wasting time on admin" },
   ],
 };
 
 const ANATOMY = {
   title: "Every post carries the same five parts.",
-  image: { src: `${IMG}/team-wasting-time.jpg`, alt: "Annotated example post: Your team is wasting time on admin" },
+  image: { src: `${IMG}/team-wasting-time-hd.png`, alt: "Annotated example post: Your team is wasting time on admin" },
   ratio: "3/4",
   parts: [
     { title: "Category label", body: "A small coral eyebrow names the pillar." },
@@ -81,10 +81,10 @@ const ANATOMY = {
 const RANGE = {
   title: "Four pillars the calendar rotates through.",
   items: [
-    { tag: "Diagnostic", title: "Why automations fail", body: "Names the real reason projects stall: messy human processes, not technology.", image: { src: `${IMG}/why-automations-fail.jpg`, alt: "Diagnostic pillar example post" } },
-    { tag: "Framework", title: "What to automate first", body: "The 80/20 rule, ROI maths, workflow audits. Helps the reader decide.", image: { src: `${IMG}/80-20-rule.jpg`, alt: "Framework pillar example post" } },
-    { tag: "Mindset", title: "Systems over prompts", body: "From typing prompts to building AI into background workflows. The core of the brand.", image: { src: `${IMG}/stop-typing-prompts.jpg`, alt: "Mindset pillar example post" } },
-    { tag: "Use case", title: "Operations teardowns", body: "Manual admin, email blasts, spreadsheet updates. Shows the work without a sales pitch.", image: { src: `${IMG}/stop-email-blasts.jpg`, alt: "Use-case pillar example post" } },
+    { tag: "Diagnostic", title: "Why automations fail", body: "Names the real reason projects stall: messy human processes, not technology.", image: { src: `${IMG}/why-automations-fail-hd.jpg`, alt: "Diagnostic pillar example post" } },
+    { tag: "Framework", title: "What to automate first", body: "The 80/20 rule, ROI maths, workflow audits. Helps the reader decide.", image: { src: `${IMG}/80-20-rule-hd.jpg`, alt: "Framework pillar example post" } },
+    { tag: "Mindset", title: "Systems over prompts", body: "From typing prompts to building AI into background workflows. The core of the brand.", image: { src: `${IMG}/stop-typing-prompts-hd.png`, alt: "Mindset pillar example post" } },
+    { tag: "Use case", title: "Operations teardowns", body: "Manual admin, email blasts, spreadsheet updates. Shows the work without a sales pitch.", image: { src: `${IMG}/stop-email-blasts-hd.png`, alt: "Use-case pillar example post" } },
   ],
 };
 
@@ -138,9 +138,9 @@ export default function SochSocialMediaPage() {
       hero={{
         ratio: "3/4",
         images: [
-          { src: `${IMG}/automation-roi.jpg`, alt: "Soch Instagram post: Stop guessing your automation ROI" },
+          { src: `${IMG}/automation-roi-hd.png`, alt: "Soch Instagram post: Stop guessing your automation ROI" },
           { src: `${IMG}/audit-before-you-automate.jpg`, alt: "Soch Instagram post: Audit before you automate" },
-          { src: `${IMG}/why-automations-fail.jpg`, alt: "Soch Instagram post: Why 80% of automations fail" },
+          { src: `${IMG}/why-automations-fail-hd.jpg`, alt: "Soch Instagram post: Why 80% of automations fail" },
         ],
       }}
       meta={META}

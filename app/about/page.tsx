@@ -79,7 +79,7 @@ export default function AboutPage() {
         footer={<ProofPill />}
         aside={
           <HeroPhoto
-            src="/Service Images/about-hero-team-meeting.webp"
+            src="/Service Images/about-hero-team-meeting-hd.webp"
             alt="A small team talking around a table in their office"
             imgClassName="object-[55%_center]"
           >
