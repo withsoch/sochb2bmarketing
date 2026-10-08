@@ -53,21 +53,22 @@ const GALLERY = {
   ratio: "16/9",
   columns: 3 as const,
   images: [
-    { src: `${IMG}/meir-statman.jpg`, alt: "Thumbnail: What do investors really want? With Meir Statman" },
-    { src: `${IMG}/tim-maurer.jpg`, alt: "Thumbnail: Your financial plan isn't about money, with Tim Maurer" },
-    { src: `${IMG}/death-of-star-managers.jpg`, alt: "Thumbnail: The death of star managers" },
-    { src: `${IMG}/hal-hershfield.jpg`, alt: "Thumbnail: Your future self is a stranger, with Hal Hershfield" },
-    { src: `${IMG}/abby-bussman.jpg`, alt: "Thumbnail: You spend more than you think, with Abby Bussman" },
-    { src: `${IMG}/daniel-crosby.jpg`, alt: "Thumbnail: The freedom problem, with Daniel Crosby" },
-    { src: `${IMG}/peter-atwater.jpg`, alt: "Thumbnail: What moves markets before data? With Peter Atwater" },
-    { src: `${IMG}/mary-beth-storjohan.jpg`, alt: "Thumbnail: The hidden reason why women leave advisors, with Mary Beth Storjohan" },
-    { src: `${IMG}/jason-pereira.jpg`, alt: "Thumbnail: The pattern every market repeats, with Jason Pereira" },
+    { src: `${IMG}/Hal Hershfield.png`, alt: "Thumbnail: Your future self is a stranger, with Hal Hershfield" },
+    { src: `${IMG}/Why Financial Advisors Fail Women.png`, alt: "Thumbnail: Why financial advisors fail women, with Mary Beth Storjohann" },
+    { src: `${IMG}/Tim Maurer.png`, alt: "Thumbnail: Your financial plan isn't about money, with Tim Maurer" },
+    { src: `${IMG}/abby-Sussman.png`, alt: "Thumbnail: You spend more than you think, with Abby Sussman" },
+    { src: `${IMG}/Jason Pereira.png`, alt: "Thumbnail: The pattern every market repeats, with Jason Pereira" },
+    // "-clean" copies: duration badge and white rounded corners removed; "-hd" = 2x upscale (no larger original exists)
+    { src: `${IMG}/peter-atwater-clean-hd.png`, alt: "Thumbnail: What moves markets before data? With Peter Atwater" },
+    { src: `${IMG}/Christine Benz-clean-hd.png`, alt: "Thumbnail: The retirement myth, with Christine Benz" },
+    { src: `${IMG}/Lawrence Yeo-clean-hd.png`, alt: "Thumbnail: The trap of more, with Lawrence Yeo" },
+    { src: `${IMG}/Corey hoffstein.png`, alt: "Thumbnail: Alts aren't complicated, with Corey Hoffstein" },
   ],
 };
 
 const ANATOMY = {
   title: "Six fixed parts, assembled every week.",
-  image: { src: "/images/case-studies/Six fixed parts, assembled every week..png", alt: "Example thumbnail showing host credit, hook, red highlight, portrait, name plate and watermark" },
+  image: { src: `${IMG}/six-fixed-parts-hd.png`, alt: "Example thumbnail showing host credit, hook, red highlight, portrait, name plate and watermark" },
   ratio: "16/9",
   parts: [
     { title: "Host credit", body: "A microphone icon and the host's name, top left." },
@@ -83,10 +84,10 @@ const RANGE = {
   title: "Consistent, without being repetitive.",
   imageFocus: "object-center",
   items: [
-    { tag: "Colour shift", title: "Accent variation", body: "Selected episodes move off red into green or teal to break up long runs.", image: { src: `${IMG}/jason-pereira.jpg`, alt: "Green accent variation thumbnail" } },
-    { tag: "Light register", title: "Data as background", body: "Market episodes get a light chart-paper background with financial iconography.", image: { src: `${IMG}/lawrence-yeo.jpg`, alt: "Light chart-paper background thumbnail: The trap of more" } },
-    { tag: "Borrowed device", title: "The quote card", body: "The hook framed as a social post, for episodes built on a guest's known argument.", image: { src: `${IMG}/annie-duke.jpg`, alt: "Quote-card thumbnail: Why winning requires quitting, with Annie Duke" } },
-    { tag: "Texture", title: "Editorial and print cues", body: "Torn paper and newsprint for episodes about findings rather than opinion.", image: { src: `${IMG}/mary-beth-storjohan.jpg`, alt: "Torn-paper editorial thumbnail" } },
+    { tag: "Colour shift", title: "Accent variation", body: "Selected episodes move off red into green or teal to break up long runs.", image: { src: `${IMG}/Jason Pereira.png`, alt: "Green accent variation thumbnail" } },
+    { tag: "Light register", title: "Data as background", body: "Market episodes get a light chart-paper background with financial iconography.", image: { src: `${IMG}/Lawrence Yeo-hd.png`, alt: "Light chart-paper background thumbnail: The trap of more" } },
+    { tag: "Borrowed device", title: "The quote card", body: "The hook framed as a social post, for episodes built on a guest's known argument.", image: { src: `${IMG}/Annie Duke.png`, alt: "Quote-card thumbnail: Why winning requires quitting, with Annie Duke" } },
+    { tag: "Two guests", title: "A centred, symmetrical layout", body: "Panel episodes put a guest on each side, the hook centred between them and both names in one plate.", image: { src: `${IMG}/adriana-massara-alison-stumacher.png`, alt: "Two-guest thumbnail: The skill missing from every school, with Adriana Massara and Alison Stumacher" } },
   ],
 };
 
@@ -140,9 +141,9 @@ export default function ShapingWealthPage() {
       hero={{
         ratio: "16/9",
         images: [
-          { src: "/images/case-studies/Making hour-long finance interviews.jpeg", alt: "Shaping Wealth thumbnail: Your future self is a stranger" },
-          { src: `${IMG}/annie-duke.jpg`, alt: "Shaping Wealth thumbnail: Why winning requires quitting" },
-          { src: `${IMG}/peter-atwater.jpg`, alt: "Shaping Wealth thumbnail: What moves markets before data?" },
+          { src: `${IMG}/Hal Hershfield.png`, alt: "Shaping Wealth thumbnail: Your future self is a stranger" },
+          { src: `${IMG}/Annie Duke.png`, alt: "Shaping Wealth thumbnail: Why winning requires quitting" },
+          { src: `${IMG}/peter-atwater.png`, alt: "Shaping Wealth thumbnail: What moves markets before data?" },
         ],
       }}
       meta={META}

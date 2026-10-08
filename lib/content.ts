@@ -521,8 +521,7 @@ export const WORK_CASE_STUDIES: WorkCaseStudy[] = [
     platform: "Instagram",
     scope: ["Social Media Management", "Design"],
     title: "Building an Instagram presence from zero followers",
-    // 2x upscale of the lossless PNG export: the card is wider than the 672px original
-    image: "/images/case-studies/soch-social-media/why-automations-fail-hd.png",
+    image: "/images/case-studies/soch-social-media/why-automations-fail-hd.jpg",
     imageAlt: "Soch Instagram post: Why 80% of automations fail",
     imageRatio: "3/4",
   },
