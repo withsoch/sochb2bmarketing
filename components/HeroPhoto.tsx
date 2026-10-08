@@ -31,11 +31,7 @@ export function HeroPhoto({
           src={src}
           alt={alt}
           priority
-          // The photos are landscape, so object-cover scales them to the
-          // frame's height: a 16:9 shot in the 26rem 4:5 frame renders ~58rem
-          // wide (~120vw in the 4:3 mobile frame). Sizing to the frame width
-          // alone fetched a variant too small and it was upscaled.
-          sizes="(min-width: 640px) 58rem, 120vw"
+          sizes="(min-width: 640px) 26rem, 90vw"
           className="aspect-[4/3] rounded-[2rem] shadow-[var(--shadow-lift)] ring-4 ring-white sm:aspect-[4/5]"
           imgClassName={imgClassName}
         />

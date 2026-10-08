@@ -97,20 +97,12 @@ const WORK_CARDS: GridCard[] = [
  * each, and every other pair is flipped, so on the two-column grid neither
  * column is all one kind. Whatever is left of the longer list follows.
  */
-const MIXED: GridCard[] = [];
+const ALL_CARDS: GridCard[] = [];
 for (let row = 0; row < Math.max(RESULT_CARDS.length, WORK_CARDS.length); row++) {
   const pair = [RESULT_CARDS[row], WORK_CARDS[row]];
   if (row % 2) pair.reverse();
-  MIXED.push(...pair.filter((c): c is GridCard => Boolean(c)));
+  ALL_CARDS.push(...pair.filter((c): c is GridCard => Boolean(c)));
 }
-
-/** Cards pulled out of the checkerboard and placed last, in this order. */
-const GRID_LAST = ["/case-studies/etz-riz", "/case-studies/shahzad-akhtar"];
-
-const ALL_CARDS: GridCard[] = [
-  ...MIXED.filter((c) => !GRID_LAST.includes(c.href)),
-  ...GRID_LAST.flatMap((href) => MIXED.filter((c) => c.href === href)),
-];
 
 export default function CaseStudiesPage() {
   return (
