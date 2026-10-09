@@ -221,7 +221,7 @@ export default function KaitlinMalaspinaPage() {
                 <img
                   src="/images/case-studies/kaitlin-malaspina.jpg"
                   alt="Kaitlin Malaspina, Brenna & Co."
-                  style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", borderRadius: "4px" }}
                 />
               </div>
             </Reveal>
