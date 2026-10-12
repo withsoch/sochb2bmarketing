@@ -26,7 +26,9 @@ export function ServicesHeroVisual() {
             alt="Instagram, YouTube and Facebook apps on a phone screen"
             ratio="3/4"
             priority
-            sizes="(min-width: 640px) 16rem, 54vw"
+            // object-cover fills the 3:4 frame by height, so the slightly wider
+            // photo renders ~18.2rem wide, not the frame's 16rem.
+            sizes="(min-width: 640px) 19rem, 54vw"
             // A true semicircle top for a 3:4 box (37.5% of the height = half
             // the width). rounded-t-full would overflow the box, and CSS then
             // scales every corner down, squaring off the bottom ones.
@@ -40,7 +42,7 @@ export function ServicesHeroVisual() {
             src="/images/services/hero-linkedin.webp"
             alt="A LinkedIn profile open on a laptop"
             ratio="5/6"
-            sizes="(min-width: 640px) 12rem, 40vw"
+            sizes="(min-width: 640px) 14rem, 40vw"
             className="rounded-[2.75rem] shadow-[var(--shadow-lift)] ring-4 ring-white"
             imgClassName="object-[30%_40%]"
           />
