@@ -150,7 +150,7 @@ export default function AboutPage() {
                 {/* the name is right beside this, so the photo is decorative
                     here and the fallback disc stays out of the a11y tree */}
                 <Avatar
-                  src="https://cdn.prod.website-files.com/68e7ded517d0693d2c345250/694e751734d7a4afc68e2e60_Rizwan%20founder.webp"
+                  src="https://www.withsoch.com/images/about/umair-cofounder.webp"
                   name={TEAM[0]?.name ?? "The Social Catalyst team"}
                   initials="S"
                   size={64}
