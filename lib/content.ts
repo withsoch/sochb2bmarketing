@@ -45,7 +45,7 @@ export const SITE = {
  */
 export const BOOKING_URL =
   process.env.NEXT_PUBLIC_BOOKING_URL ??
-  "https://cal.com/consult-with-riz/marketing-discovery-call";
+  "https://cal.com/consult-with-riz/marketing-strategy-call-social-catalyst";
 
 /**
  * Where the CTAs send people to schedule via an embedded calendar.
